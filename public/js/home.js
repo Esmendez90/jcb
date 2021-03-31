@@ -1,5 +1,7 @@
 let city;
 let state;
+let key = config.X_RAPIDAPI_KEY;
+let host = config.X_RAPIDAPI_HOST;
 
 $("#search_btn").on("click", function (event) {
   event.preventDefault();
@@ -16,8 +18,8 @@ function searchProperty(city, state) {
     url: `https://realtor.p.rapidapi.com/properties/v2/list-for-rent?city=${city}&state_code=${state}&limit=200&offset=0&sort=relevance`,
     method: "GET",
     headers: {
-      "x-rapidapi-key": "fbf1849f58mshc4a745d4d24f860p128e2fjsn3c711de2d5ef",
-      "x-rapidapi-host": "realtor.p.rapidapi.com",
+      "x-rapidapi-key": key,
+      "x-rapidapi-host": host,
     },
   };
   $.ajax(settings).done(function (response) {
