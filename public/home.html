@@ -23,48 +23,54 @@
     <script src="../config.js"></script>
     <title>Virtual Estate</title>
   </head>
-  <body style="width: 100%; height: 100%">
+  <body>
     <!-- Header -->
     <header class="header">
       <h1><i class="fa fa-home"></i> Virtual Estate</h1>
     </header>
 
     <!-- Background container/Image -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="background_img_container">
+          <img
+            src="https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="background_house_img"
+          />
+          <!-- Search box -->
+          <div class="input_container">
+            <input
+              id="city_search"
+              type="text"
+              name="search"
+              style="margin-left: 17px"
+              placeholder="City"
+            />
 
-    <div class="background_img_container">
-      <img
-        src="https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        class="background_house_img"
-      />
-      <!-- Search box -->
-      <div class="input_container">
-        <input
-          id="city_search"
-          type="text"
-          name="search"
-          style="margin-left: 17px"
-          placeholder="City"
-        />
-
-        <input
-          id="state_search"
-          type="text"
-          name="search"
-          placeholder="State"
-        />
-        <span class="span_search_lense">
-          <button id="search_btn" type="search">
-            <i class="fa fa-search"></i>
-          </button>
-        </span>
+            <input
+              id="state_search"
+              type="text"
+              name="search"
+              placeholder="State"
+            />
+            <span class="span_search_lense">
+              <button id="search_btn" type="search">
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="contact_media">
+    <!-- Contact logos -->
+    <div class="row contactRow">
+      <div class="col-md-12 contact_media">
       <div class="logos">
         <img class="github" src="assets/images/Octocat.jpg" />
 
         <img class="linkedin" src="assets/images/linkedin-logo copy.png" />
+      </div>
       </div>
     </div>
 

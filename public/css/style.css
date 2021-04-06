@@ -1,9 +1,15 @@
+body {
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
 header {
   text-align: justify;
   text-align: center;
   letter-spacing: 1px;
   height: 6em;
-  padding: 1em 10%;
+  padding: 2em 10%;
   border-top-style: solid;
   border-color: rgb(80, 200, 255);
   border-width: 4px;
@@ -18,11 +24,12 @@ h1 {
 
 .background_img_container {
   position: relative;
+  padding: 50px;
 }
 
 .background_house_img {
-  margin: 10px 0px;
-  width: 100%;
+  margin: 0px 0px;
+  min-width: 100%;
   height: 400px;
   border-top-style: solid;
   border-width: 2px;
@@ -42,7 +49,8 @@ h1 {
   display: inline-flex;
 }
 
-#city_search, #state_search {
+#city_search,
+#state_search {
   width: auto;
   height: 40px;
   border-style: solid;
@@ -52,6 +60,7 @@ h1 {
   margin: 10px 5px 6px;
 }
 
+/* Search lense container */
 .span_search_lense {
   padding: 5px;
   margin: 10px 5px 6px;
@@ -62,6 +71,7 @@ h1 {
   background-color: white;
 }
 
+/* Search lense styling */
 .fa {
   color: rgb(80, 200, 255);
   font-size: 30px;
@@ -77,8 +87,31 @@ h1 {
   display: inline-flex;
 }
 
-.github, .linkedin {
+.github,
+.linkedin {
   width: 100px;
   height: 100px;
   margin: 10px;
+}
+
+/* Styling for screen less than 629px */
+@media only screen and (max-width: 629px) {
+  .background_img_container {
+    padding: 50px 0px;
+  }
+}
+
+/* Styling for screen between 300 and  540px */
+@media only screen and (min-width: 300px) and (max-width: 540px) {
+  .header {
+    width: 540px;
+  }
+
+  .background_img_container {
+    width: fit-content;
+  }
+
+  .contactRow {
+    width: 540px;
+  }
 }
