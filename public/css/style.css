@@ -141,7 +141,7 @@ h1 {
 
   #city_search,
   #state_search {
-    width: 40%;
+    width: 50%;
     margin: 5px 5px 2px !important;
     border-radius: 14px;
     border-style: solid;
@@ -149,9 +149,30 @@ h1 {
     border-width: 1px;
   }
 
+  #state_search {
+    width: 30%;
+    margin-right: 0px !important;
+  }
+
   .span_search_lense {
     padding: 0;
-    margin: 7px 3px 5px 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #febd69;
+    width: 14%;
+    position: relative;
+    left: 2%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  #search_btn {
+    position: absolute;
+    top: 16%;
+    right: 16%;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #febd69;
   }
 
   .quote {
@@ -190,13 +211,14 @@ h1 {
     width: 36%;
     background-color: rgb(80, 200, 255);
     box-shadow: 0.5px 0.5px rgb(34, 111, 146);
-    border-color: rgb(34, 111, 146);
-    text-shadow: 1px 1px rgb(34, 111, 146);
+    border-color: rgb(80, 200, 255) !important;
+    text-shadow: 0.8px 0.7px black;
   }
 
   .btn-primary:hover {
-    background-color: rgb(34, 111, 146);
-    box-shadow: 0.5px 0.5px  rgb(80, 200, 255);
+    background-color: #febd69;
+    box-shadow: 1px 1px  rgb(34 111 146);
+    border-color: #febd69 !important;
   }
 
   /* Contact us */
