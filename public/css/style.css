@@ -88,7 +88,7 @@ h1 {
 
 .quote {
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -152,7 +152,7 @@ h1 {
 }
 
 /* Mobile responsive styling */
-@media only screen and (min-width: 300px) and (max-width: 460px) {
+@media only screen and (min-width: 300px) and (max-width:460px) {
   h1 {
     padding: 0;
   }
@@ -174,6 +174,7 @@ h1 {
     border-style: solid;
     border-color: rgb(219, 218, 218);
     border-width: 1px;
+    overflow: hidden;
   }
 
   #city_search,
@@ -209,13 +210,13 @@ h1 {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
-    margin-top: 2px;
+    margin-top: 9px;
     background-color: #febd69;
   }
 
   .quote {
     position: absolute;
-    top: 35%;
+    top:28%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -275,18 +276,39 @@ h1 {
   }
 }
 
-/* Style background-image for screens greater than 600px */
-@media only screen and (min-width: 600px){
+/* Style background-image for screens greater than 769px. 
+769px — 1024px: Small screens, laptops*/
+@media only screen and (min-width: 769px){
 
   .background_img_container {
     padding: 0px 30px;
   }
+
+  .cardColumn {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 20%;
+  }
+
+  .btn-primary {
+    width: 70%;
+  }
+
+  .card {
+    width: 31% !important;
+    margin: 0px 4px ;
+    box-shadow: rgb(209 209 213) 0px 5px 15px;
+  }
 }
 
-/* Style background-image for screens greater than 1000 px */
-@media only screen and (min-width: 1000px){
+/* Style background-image for screens greater than 1025 px.
+1025px — 1200px: Desktops, large screens */
+@media only screen and (min-width: 1025px){
 
   .background_img_container {
-    padding: 0px 60px;
+    padding: 0px 80px;
   }
 }
