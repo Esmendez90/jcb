@@ -289,17 +289,13 @@ h1 {
     justify-content: center;
   }
 
-  .card {
-    width: 20%;
-  }
-
   .btn-primary {
     width: 70%;
   }
 
   .card {
     width: 31% !important;
-    margin: 0px 5px ;
+    margin: 0px 5px;
     box-shadow: rgb(209 209 213) 0px 5px 15px;
   }
 }
@@ -310,5 +306,30 @@ h1 {
 
   .background_img_container {
     padding: 0px 80px;
+  }
+
+  .card {
+    width: 28% !important;
+  }
+}
+
+/* Style background-image for screens greater than 1201 px.
+1201px and more — Extra large screens, TV. */
+@media only screen and (min-width: 1201px){
+
+  .background_img_container {
+    padding: 0px 90px;
+  }
+  
+  .rowDefault {
+    justify-content: center !important;
+  }
+
+  .cardColumn {
+    display: contents;
+  }
+
+  .card {
+    width: 28% !important;
   }
 }
