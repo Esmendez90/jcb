@@ -19,6 +19,9 @@
     <!-- My stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- Rentals stylesheet -->
+    <link rel="stylesheet" href="css/rentals.css" />
+
     <!-- Config.js file -->
     <script src="../config.js"></script>
     <title>Virtual Estate</title>
@@ -46,14 +49,14 @@
               type="text"
               name="search"
               style="margin-left: 17px"
-              placeholder="City"
+              placeholder="City Name"
             />
 
             <input
               id="state_search"
               type="text"
               name="search"
-              placeholder="State"
+              placeholder="State Initials"
             />
             <span class="span_search_lense">
               <button id="search_btn" type="search">
@@ -63,9 +66,22 @@
           </div>
         </div>
         <!-- Quote -->
-        <p class="quote">
-          "Here goes a cool slogan that attracks people to this page...!"
-        </p>
+        <p class="quote">Let us help you find your dream home...</p>
+      </div>
+    </div>
+
+    <!-- Rental Listings -->
+    <div id="rentalListing" class="rentals">
+     
+      <div id="card" class="card">
+
+        <span
+        onclick="document.getElementById('rentalListing').style.display='none'"
+        class="close"
+        title="Close Card"
+        >&times;</span
+      >
+
       </div>
     </div>
 
@@ -81,7 +97,7 @@
               bulk of the card's content.
             </p>
             <div class="btn-container">
-            <a href="#" class="btn btn-primary">See Rentals</a>
+              <a href="#" class="btn btn-primary">See Rentals</a>
             </div>
           </div>
         </div>
@@ -94,7 +110,7 @@
               bulk of the card's content.
             </p>
             <div class="btn-container">
-            <a href="#" class="btn btn-primary">See Homes</a>
+              <a href="#" class="btn btn-primary">See Homes</a>
             </div>
           </div>
         </div>
@@ -107,7 +123,7 @@
               bulk of the card's content.
             </p>
             <div class="btn-container">
-            <a href="#" class="btn btn-primary">List Property</a>
+              <a href="#" class="btn btn-primary">List Property</a>
             </div>
           </div>
         </div>
