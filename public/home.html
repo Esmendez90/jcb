@@ -88,26 +88,45 @@
           <p class="propertyQuest">
             What type of properties do you want to search for?
           </p>
-          <button id="rentalBtn" class="btn btn-primary propertyQuest rental" type="button">
+          <button
+            id="rentalBtn"
+            class="btn btn-primary propertyQuest rental"
+            type="button"
+          >
             Rentals
           </button>
-          <button id="onSaleBtn" class="btn btn-primary propertyQuest onSale" type="button">
+          <button
+            id="onSaleBtn"
+            class="btn btn-primary propertyQuest onSale"
+            type="button"
+          >
             On Sale
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Rental Listings -->
+    <!-- Display Listings -->
     <div id="rentalListing" class="rentals">
       <div id="propListing" class="card">
         <span
-          onclick="document.getElementById('rentalListing').style.display='none'"
+          onclick="document.getElementById('rentalListing').style.display='none'; location.reload()"
           class="close"
           title="Close Card"
           >&times;</span
         >
       </div>
+    </div>
+
+    <!-- Enter zip code -->
+    <div id="zipCodeContainer">
+      <form id="zipCodeInnerContainer" class="">
+        <div class="enterZipCodeContainer">
+          <label for="codeInput">Enter zip code </label>
+          <input type="text" id="codeInput" name="codeInput" />
+          <button id="zipCodeBtn" type="submit">Search</button>
+        </div>
+      </form>
     </div>
 
     <!-- Default listings -->
@@ -118,11 +137,13 @@
           <div class="card-body">
             <h5 class="card-title">Rent</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Search random properties for rent in your area by entering your
+              zip code.
             </p>
             <div class="btn-container">
-              <a href="#" class="btn btn-primary">See Rentals</a>
+              <a href="#" id="searchByCode" class="btn btn-primary"
+                >See Rentals</a
+              >
             </div>
           </div>
         </div>

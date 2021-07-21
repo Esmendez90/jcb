@@ -2,6 +2,8 @@ let rentalListing = document.getElementById("rentalListing");
 let propStatus = document.getElementById("propStatus");
 let citySearch = document.getElementById("city_search");
 let stateSearch = document.getElementById("state_search");
+let zipCodeContainer = document.getElementById("zipCodeContainer");
+let codeInput = document.getElementById("codeInput");
 let city;
 let state;
 let key = config.X_RAPIDAPI_KEY;
@@ -17,6 +19,11 @@ $("#search_btn").on("click", function (event) {
     state = $("#state_search").val().trim();
     choosePropStatus();
   }
+});
+
+$("#searchByCode").on("click", function (event) {
+  event.preventDefault();
+  enterZipCode();
 });
 
 // Choose between rentals or for sale
@@ -85,18 +92,53 @@ function showListings(listings) {
 }
 
 // For sale search
-function searchOnSale(city, state){
+function searchOnSale(city, state) {
   const settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${state}&city=${city}&offset=0&limit=10&sort=relevance`,
-    "method": "GET",
-    "headers": {
+    async: true,
+    crossDomain: true,
+    url: `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${state}&city=${city}&offset=0&limit=10&sort=relevance`,
+    method: "GET",
+    headers: {
       "x-rapidapi-key": key,
       "x-rapidapi-host": host,
     },
   };
-  
+
+  $.ajax(settings).done(function (response) {
+    let listings = response.listings;
+    // console.log(listings);
+    showListings(listings);
+  });
+}
+
+// Enter zip code input
+function enterZipCode() {
+  zipCodeContainer.style.display = "block";
+
+  $("#zipCodeBtn").on("click", function (event) {
+    event.preventDefault();
+    if (codeInput.value === "") {
+      alert("Please, enter a valid zip code to complete your search.");
+    } else {
+      codeInput = $("#codeInput").val().trim();
+      searchByZipCode(codeInput);
+    }
+  });
+}
+
+// Search rentals using zip code
+function searchByZipCode(zipCode) {
+  const settings = {
+    async: true,
+    crossDomain: true,
+    url: `https://realtor.p.rapidapi.com/properties/list-for-rent?state_code=0&city=0&limit=200&offset=0&postal_code=${zipCode}&sort=relevance`,
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": key,
+      "x-rapidapi-host": host,
+    },
+  };
+
   $.ajax(settings).done(function (response) {
     let listings = response.listings;
     // console.log(listings);

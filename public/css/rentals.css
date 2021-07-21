@@ -21,12 +21,12 @@
   top: 25%;
 }
 
-.propertyIcon{
+.propertyIcon {
   position: relative;
   top: 40%;
 }
 
-.homeicon{
+.homeicon {
   font-size: 50px;
 }
 
@@ -35,18 +35,15 @@
   margin: 10px auto;
 }
 
-/* #propStatusCard {
-  width: 88% !important;
-  height: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: auto !important;
-  margin-bottom: auto !important;
-} */
-
 /* The Modal (background) */
 #rentalListing {
   text-align: center;
+}
+
+#zipCodeContainer {
+  display: none;
+  text-align: center;
+  margin: 20px auto;
 }
 
 .rentals,
