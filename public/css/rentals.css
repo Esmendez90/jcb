@@ -1,9 +1,56 @@
+/* Choose property status container */
+#propStatus {
+  height: 70% !important;
+  width: 50% !important;
+  padding: 20px !important;
+  top: 10%;
+}
+
+.selectPropType {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  background-color: white;
+  margin: 0px auto;
+}
+
+.propertyQuest {
+  position: relative;
+  top: 25%;
+}
+
+.propertyIcon{
+  position: relative;
+  top: 40%;
+}
+
+.homeicon{
+  font-size: 50px;
+}
+
+.rental,
+.onSale {
+  margin: 10px auto;
+}
+
+/* #propStatusCard {
+  width: 88% !important;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+} */
+
 /* The Modal (background) */
 #rentalListing {
   text-align: center;
 }
 
-.rentals {
+.rentals,
+#propStatus {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -19,9 +66,10 @@
   margin: 50px auto;
 }
 
-#card {
+#cardPropType {
   margin: 0px auto;
-  width: 80% !important;
+  height: 100%;
+  width: 100% !important;
 }
 
 #cardListing {
@@ -52,10 +100,10 @@
 }
 
 @media only screen and (min-width: 768px) {
-  #card {
+  #propListing {
     display: contents;
   }
-  
+
   #cardListing {
     display: inline-flex !important;
     width: 40% !important;

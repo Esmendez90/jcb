@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
     <!-- My stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
 
@@ -43,13 +44,14 @@
             class="background_house_img"
           />
           <!-- Search box -->
-          <div class="input_container">
+          <form class="input_container">
             <input
               id="city_search"
               type="text"
               name="search"
               style="margin-left: 17px"
               placeholder="City Name"
+              required
             />
 
             <input
@@ -57,31 +59,54 @@
               type="text"
               name="search"
               placeholder="State Initials"
+              required
             />
             <span class="span_search_lense">
-              <button id="search_btn" type="search">
+              <button id="search_btn" type="submit">
                 <i class="fa fa-search"></i>
               </button>
             </span>
-          </div>
+          </form>
         </div>
         <!-- Quote -->
         <p class="quote">Let us help you find your dream home...</p>
       </div>
     </div>
 
+    <!-- Choose Property Status (rental or for sale) -->
+    <div id="propStatus">
+      <div id="cardPropType" class="card">
+        <div class="selectPropType">
+          <span
+            onclick="document.getElementById('propStatus').style.display='none'"
+            class="close"
+            title="Close Card"
+            style="right: 28%; top: 9%"
+            >&times;</span
+          >
+
+          <p class="propertyQuest">
+            What type of properties do you want to search for?
+          </p>
+          <button id="rentalBtn" class="btn btn-primary propertyQuest rental" type="button">
+            Rentals
+          </button>
+          <button id="onSaleBtn" class="btn btn-primary propertyQuest onSale" type="button">
+            On Sale
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Rental Listings -->
     <div id="rentalListing" class="rentals">
-     
-      <div id="card" class="card">
-
+      <div id="propListing" class="card">
         <span
-        onclick="document.getElementById('rentalListing').style.display='none'"
-        class="close"
-        title="Close Card"
-        >&times;</span
-      >
-
+          onclick="document.getElementById('rentalListing').style.display='none'"
+          class="close"
+          title="Close Card"
+          >&times;</span
+        >
       </div>
     </div>
 

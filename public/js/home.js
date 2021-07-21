@@ -1,4 +1,5 @@
 let rentalListing = document.getElementById("rentalListing");
+let propStatus = document.getElementById("propStatus");
 let citySearch = document.getElementById("city_search");
 let stateSearch = document.getElementById("state_search");
 let city;
@@ -14,15 +15,34 @@ $("#search_btn").on("click", function (event) {
   } else {
     city = encodeURI($("#city_search").val().trim());
     state = $("#state_search").val().trim();
-    searchProperty(city, state);
+    choosePropStatus();
   }
 });
 
-function searchProperty(city, state) {
+// Choose between rentals or for sale
+function choosePropStatus() {
+  propStatus.style.display = "block";
+  // Rental button displays properties
+  $("#rentalBtn").on("click", function (event) {
+    event.preventDefault();
+    searchForRent(city, state);
+    propStatus.style.display = "none";
+  });
+
+  // On sale button will display properties
+  $("#onSaleBtn").on("click", function (event) {
+    event.preventDefault();
+    searchOnSale(city, state);
+    propStatus.style.display = "none";
+  });
+}
+
+// Rentals search
+function searchForRent(city, state) {
   const settings = {
     async: true,
     crossDomain: true,
-    url: `https://realty-in-us.p.rapidapi.com/properties/list-for-rent?city=${city}&state_code=${state}&limit=8&offset=0&sort=relevance`,
+    url: `https://realty-in-us.p.rapidapi.com/properties/list-for-rent?city=${city}&state_code=${state}&limit=10&offset=0&sort=relevance`,
     method: "GET",
     headers: {
       "x-rapidapi-key": key,
@@ -31,12 +51,12 @@ function searchProperty(city, state) {
   };
   $.ajax(settings).done(function (response) {
     let listings = response.listings;
-    //console.log(listings);
-
+    // console.log(listings);
     showListings(listings);
   });
 }
 
+// Rental Listings
 function showListings(listings) {
   rentalListing.style.display = "block";
   for (let i = 0; i < listings.length; i++) {
@@ -47,7 +67,7 @@ function showListings(listings) {
     let propBaths = listings[i].baths;
     let propBeds = listings[i].beds;
 
-    $("#card").append(
+    $("#propListing").append(
       `
       <div id="cardListing" class="card">
         <img src="${propPhoto}" id="propertyImg" class="card-img-top" alt="Property house" />
@@ -62,4 +82,24 @@ function showListings(listings) {
       `
     );
   }
+}
+
+// For sale search
+function searchOnSale(city, state){
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${state}&city=${city}&offset=0&limit=10&sort=relevance`,
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": key,
+      "x-rapidapi-host": host,
+    },
+  };
+  
+  $.ajax(settings).done(function (response) {
+    let listings = response.listings;
+    // console.log(listings);
+    showListings(listings);
+  });
 }
