@@ -8,6 +8,9 @@ let city;
 let state;
 let key = config.X_RAPIDAPI_KEY;
 let host = config.X_RAPIDAPI_HOST;
+let url;
+let rent = true;
+let sale = false;
 
 $("#search_btn").on("click", function (event) {
   event.preventDefault();
@@ -26,30 +29,62 @@ $("#searchByCode").on("click", function (event) {
   enterZipCode();
 });
 
+$("#searchForSaleByCode").on("click", function (event) {
+  event.preventDefault();
+  rent = false;
+  sale = true;
+  enterZipCode();
+});
+
 // Choose between rentals or for sale
 function choosePropStatus() {
   propStatus.style.display = "block";
-  // Rental button displays properties
+  // Rental button
   $("#rentalBtn").on("click", function (event) {
     event.preventDefault();
-    searchForRent(city, state);
+    url = `https://realty-in-us.p.rapidapi.com/properties/list-for-rent?city=${city}&state_code=${state}&limit=10&offset=0&sort=relevance`;
+    console.log(url);
+    searchProperties(url);
     propStatus.style.display = "none";
   });
 
-  // On sale button will display properties
+  // On sale button
   $("#onSaleBtn").on("click", function (event) {
     event.preventDefault();
-    searchOnSale(city, state);
+    url = `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${state}&city=${city}&offset=0&limit=10&sort=relevance`;
+    console.log(url);
+    searchProperties(url);
     propStatus.style.display = "none";
   });
 }
 
-// Rentals search
-function searchForRent(city, state) {
+// Enter zip code input
+function enterZipCode() {
+  zipCodeContainer.style.display = "block";
+
+  $("#zipCodeBtn").on("click", function (event) {
+    event.preventDefault();
+    if (codeInput.value === "") {
+      alert("Please, enter a valid zip code to complete your search.");
+    } else if (rent && !sale) {
+      codeInput = $("#codeInput").val().trim();
+      url = `https://realtor.p.rapidapi.com/properties/list-for-rent?state_code=0&city=0&limit=200&offset=0&postal_code=${codeInput}&sort=relevance`;
+      searchProperties(url);
+    } else if (!rent && sale) {
+      codeInput = $("#codeInput").val().trim();
+      url = `https://realtor.p.rapidapi.com/properties/list-for-sale?state_code=0&city=0&limit=200&offset=0&postal_code=${codeInput}&sort=relevance`;
+      searchProperties(url);
+    }
+  });
+}
+
+// Search properties
+function searchProperties(url) {
+  console.log(url);
   const settings = {
     async: true,
     crossDomain: true,
-    url: `https://realty-in-us.p.rapidapi.com/properties/list-for-rent?city=${city}&state_code=${state}&limit=10&offset=0&sort=relevance`,
+    url: url,
     method: "GET",
     headers: {
       "x-rapidapi-key": key,
@@ -58,12 +93,12 @@ function searchForRent(city, state) {
   };
   $.ajax(settings).done(function (response) {
     let listings = response.listings;
-    // console.log(listings);
+    console.log(listings);
     showListings(listings);
   });
 }
 
-// Rental Listings
+// Property Listings
 function showListings(listings) {
   rentalListing.style.display = "block";
   for (let i = 0; i < listings.length; i++) {
@@ -89,59 +124,4 @@ function showListings(listings) {
       `
     );
   }
-}
-
-// For sale search
-function searchOnSale(city, state) {
-  const settings = {
-    async: true,
-    crossDomain: true,
-    url: `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${state}&city=${city}&offset=0&limit=10&sort=relevance`,
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": key,
-      "x-rapidapi-host": host,
-    },
-  };
-
-  $.ajax(settings).done(function (response) {
-    let listings = response.listings;
-    // console.log(listings);
-    showListings(listings);
-  });
-}
-
-// Enter zip code input
-function enterZipCode() {
-  zipCodeContainer.style.display = "block";
-
-  $("#zipCodeBtn").on("click", function (event) {
-    event.preventDefault();
-    if (codeInput.value === "") {
-      alert("Please, enter a valid zip code to complete your search.");
-    } else {
-      codeInput = $("#codeInput").val().trim();
-      searchByZipCode(codeInput);
-    }
-  });
-}
-
-// Search rentals using zip code
-function searchByZipCode(zipCode) {
-  const settings = {
-    async: true,
-    crossDomain: true,
-    url: `https://realtor.p.rapidapi.com/properties/list-for-rent?state_code=0&city=0&limit=200&offset=0&postal_code=${zipCode}&sort=relevance`,
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": key,
-      "x-rapidapi-host": host,
-    },
-  };
-
-  $.ajax(settings).done(function (response) {
-    let listings = response.listings;
-    // console.log(listings);
-    showListings(listings);
-  });
 }
