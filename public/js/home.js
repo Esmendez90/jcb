@@ -11,16 +11,19 @@ let host = config.X_RAPIDAPI_HOST;
 let url;
 let rent = true;
 let sale = false;
+let stateInit =
+  "AK AL AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY";
 
 $("#search_btn").on("click", function (event) {
   event.preventDefault();
-
-  if (citySearch.value === "" || stateSearch.value === "") {
+  state = $("#state_search").val().trim().toUpperCase();
+  city = encodeURI($("#city_search").val().trim());
+  if ($.inArray(state, stateInit.split(" ")) >= 0) {
+    choosePropStatus();
+  } else if (citySearch.value === "" || stateSearch.value === "") {
     alert("Please, enter a city and state to complete your search.");
   } else {
-    city = encodeURI($("#city_search").val().trim());
-    state = $("#state_search").val().trim();
-    choosePropStatus();
+    alert("Please, enter valid U.S state initials.");
   }
 });
 
@@ -102,7 +105,6 @@ function searchProperties(url) {
 function showListings(listings) {
   rentalListing.style.display = "block";
   for (let i = 0; i < listings.length; i++) {
-    
     let propPhoto = listings[i].photo;
     let propStatus = listings[i].prop_status;
     let propPrice = listings[i].price;
@@ -110,10 +112,11 @@ function showListings(listings) {
     let propBaths = listings[i].baths;
     let propBeds = listings[i].beds;
 
-    if(propPhoto){
-      propPhoto = listings[i].photo;;
-    } else if (propPhoto = "undefined") {
-      propPhoto = "https://i0.wp.com/reviveyouthandfamily.org/wp-content/uploads/2016/11/house-placeholder.jpg?ssl=1";
+    if (propPhoto) {
+      propPhoto = listings[i].photo;
+    } else if ((propPhoto = "undefined")) {
+      propPhoto =
+        "https://i0.wp.com/reviveyouthandfamily.org/wp-content/uploads/2016/11/house-placeholder.jpg?ssl=1";
     }
 
     $("#propListing").append(
