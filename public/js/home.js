@@ -45,7 +45,7 @@ function choosePropStatus() {
   // Rental button
   $("#rentalBtn").on("click", function (event) {
     event.preventDefault();
-    url = `https://realty-in-us.p.rapidapi.com/properties/list-for-rent?city=${city}&state_code=${state}&limit=10&offset=0&sort=relevance`;
+    url = `https://realty-in-us.p.rapidapi.com/properties/list-for-rent?city=${city}&state_code=${state}&limit=200&offset=0&sort=relevance`;
     console.log(url);
     searchProperties(url);
     propStatus.style.display = "none";
@@ -54,7 +54,7 @@ function choosePropStatus() {
   // On sale button
   $("#onSaleBtn").on("click", function (event) {
     event.preventDefault();
-    url = `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${state}&city=${city}&offset=0&limit=10&sort=relevance`;
+    url = `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${state}&city=${city}&offset=0&limit=200&sort=relevance`;
     console.log(url);
     searchProperties(url);
     propStatus.style.display = "none";
@@ -96,8 +96,14 @@ function searchProperties(url) {
   };
   $.ajax(settings).done(function (response) {
     let listings = response.listings;
-    console.log(listings);
-    showListings(listings);
+
+    let randomProp = [];
+    for (var i = 0; i < 20; i++) {
+      let rand = listings[Math.floor(Math.random() * 200)];
+      randomProp.push(rand);
+    }
+    //console.log(randomProp);
+    showListings(randomProp);
   });
 }
 
