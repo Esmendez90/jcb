@@ -102,12 +102,19 @@ function searchProperties(url) {
 function showListings(listings) {
   rentalListing.style.display = "block";
   for (let i = 0; i < listings.length; i++) {
+    
     let propPhoto = listings[i].photo;
     let propStatus = listings[i].prop_status;
     let propPrice = listings[i].price;
     let propAddress = listings[i].address;
     let propBaths = listings[i].baths;
     let propBeds = listings[i].beds;
+
+    if(propPhoto){
+      propPhoto = listings[i].photo;;
+    } else if (propPhoto = "undefined") {
+      propPhoto = "https://i0.wp.com/reviveyouthandfamily.org/wp-content/uploads/2016/11/house-placeholder.jpg?ssl=1";
+    }
 
     $("#propListing").append(
       `
