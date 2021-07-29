@@ -46,7 +46,7 @@ function choosePropStatus() {
   $("#rentalBtn").on("click", function (event) {
     event.preventDefault();
     url = `https://realty-in-us.p.rapidapi.com/properties/list-for-rent?city=${city}&state_code=${state}&limit=200&offset=0&sort=relevance`;
-    console.log(url);
+    
     searchProperties(url);
     propStatus.style.display = "none";
   });
@@ -83,7 +83,7 @@ function enterZipCode() {
 
 // Search properties
 function searchProperties(url) {
-  console.log(url);
+  //console.log(url);
   const settings = {
     async: true,
     crossDomain: true,
@@ -96,14 +96,14 @@ function searchProperties(url) {
   };
   $.ajax(settings).done(function (response) {
     let listings = response.listings;
-
-    let randomProp = [];
-    for (var i = 0; i < 20; i++) {
-      let rand = listings[Math.floor(Math.random() * 200)];
-      randomProp.push(rand);
-    }
-    //console.log(randomProp);
-    showListings(randomProp);
+    //console.log(listings);
+    // let listingserties = [];
+    // for (var i = 0; i < 20; i++) {
+    //   let rand = listings[Math.floor(Math.random() * 200)];
+    //   listingserties.push(rand);
+    // }
+    // console.log(listingserties);
+    showListings(listings);
   });
 }
 
