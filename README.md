@@ -7,7 +7,7 @@
   
   * [Description](#description)
   * [Requirements](#requirements)
-  * [Link-To-Application](#link-to-application)
+  * [Link To Application](#link-to-application)
   * [Tools](#tools)
   * [Questions](#questions)
   
