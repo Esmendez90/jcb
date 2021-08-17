@@ -55,7 +55,7 @@ function choosePropStatus() {
   $("#onSaleBtn").on("click", function (event) {
     event.preventDefault();
     url = `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${state}&city=${city}&offset=0&limit=200&sort=relevance`;
-    console.log(url);
+   // console.log(url);
     searchProperties(url);
     propStatus.style.display = "none";
   });
