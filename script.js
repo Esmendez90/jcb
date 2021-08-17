@@ -6,8 +6,6 @@ let zipCodeContainer = document.getElementById("zipCodeContainer");
 let codeInput = document.getElementById("codeInput");
 let city;
 let state;
-let key = "fbf1849f58mshc4a745d4d24f860p128e2fjsn3c711de2d5ef";
-let host = "realty-in-us.p.rapidapi.com";
 let url;
 let rent = true;
 let sale = false;
@@ -90,8 +88,8 @@ function searchProperties(url) {
     url: url,
     method: "GET",
     headers: {
-      "x-rapidapi-key": key,
-      "x-rapidapi-host": host,
+      "x-rapidapi-key": "fbf1849f58mshc4a745d4d24f860p128e2fjsn3c711de2d5ef",
+      "x-rapidapi-host": "realty-in-us.p.rapidapi.com",
     },
   };
   $.ajax(settings).done(function (response) {
