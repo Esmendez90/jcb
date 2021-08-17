@@ -6,16 +6,13 @@ let zipCodeContainer = document.getElementById("zipCodeContainer");
 let codeInput = document.getElementById("codeInput");
 let city;
 let state;
-let key = config.X_RAPIDAPI_KEY;
-let host = config.X_RAPIDAPI_HOST;
+let key = "fbf1849f58mshc4a745d4d24f860p128e2fjsn3c711de2d5ef";
+let host = "realty-in-us.p.rapidapi.com";
 let url;
 let rent = true;
 let sale = false;
 let stateInit =
   "AK AL AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY";
-
-console.log(key);
-console.log(host);
 
 $("#search_btn").on("click", function (event) {
   event.preventDefault();
