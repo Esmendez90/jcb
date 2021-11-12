@@ -84,6 +84,10 @@ h1 {
   text-align: justify;
 }
 
+.text {
+  text-align: center;
+}
+
 .contact-col {
   margin: 20px auto;
   color: white;
@@ -108,9 +112,35 @@ h1 {
 }
 
 .gmail {
-  width: 44px;
+  width: 45px;
 }
 
+.card {
+  color: white;
+  background-color: black;
+  width: 100%;
+  border: 1px solid rgb(87, 86, 86);
+  text-align: center;
+}
+
+.btn-primary {
+  width: 45%;
+  background-color: #febd69 !important;
+  box-shadow: 1px 1px rgb(87, 86, 86);
+  border-color: #fca739;
+  border-width: thick;
+  text-shadow: 1px 0.5px black;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.btn-primary:hover {
+  border-color: rgb(87, 86, 86);
+}
+
+/* ============================== */
 .input_container {
   position: absolute;
   top: 20%;
@@ -160,38 +190,6 @@ h1 {
   opacity: 0.7;
 }
 
-/* Styling for cards */
-.rowDefault {
-  width: 100%;
-  margin: 10px 0px;
-}
-
-.card {
-  margin-bottom: 10px;
-}
-
-.card-title {
-  text-align: center;
-}
-
-.btn-container {
-  text-align: center;
-}
-
-.btn-primary {
-  width: 36%;
-  background-color: rgb(80, 200, 255);
-  box-shadow: 0.5px 0.5px rgb(34, 111, 146);
-  border-color: rgb(80, 200, 255) !important;
-  text-shadow: 0.8px 0.7px black;
-}
-
-.btn-primary:hover {
-  background-color: #febd69;
-  box-shadow: 1px 1px rgb(34 111 146);
-  border-color: #febd69 !important;
-}
-
 .contact_media {
   text-align: center;
   margin: 20px;
@@ -201,10 +199,6 @@ h1 {
 @media only screen and (min-width: 300px) and (max-width: 460px) {
   h1 {
     padding: 0;
-  }
-
-  .background_house_img {
-    height: 250px;
   }
 
   .input_container {
@@ -259,66 +253,11 @@ h1 {
     margin-top: 9px;
     background-color: #febd69;
   }
-
-  .quote {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px black;
-    font-style: italic;
-    font-family: cursive;
-    font-size: 20px;
-  }
-
-  /* Styling for default cards */
-  .rowDefault {
-    width: 100%;
-    margin: 10px 0px;
-  }
-
-  .card {
-    margin-bottom: 10px;
-  }
-
-  .card-title {
-    text-align: center;
-  }
-
-  .btn-container {
-    text-align: center;
-  }
-
-  .btn-primary {
-    width: 36%;
-    background-color: rgb(80, 200, 255);
-    box-shadow: 0.5px 0.5px rgb(34, 111, 146);
-    border-color: rgb(80, 200, 255) !important;
-    text-shadow: 0.8px 0.7px black;
-  }
-
-  .btn-primary:hover {
-    background-color: #febd69;
-    box-shadow: 1px 1px rgb(34 111 146);
-    border-color: #febd69 !important;
-  }
-
-  /* Contact us */
-  .contact_media {
-    margin: 10px 0px;
-  }
 }
 
 /* Style background-image for screens greater than 769px. 
 769px — 1024px: Small screens, laptops*/
-@media only screen and (min-width: 769px) {
-  .background_img_container {
-    padding: 0px 30px;
-  }
-
+@media only screen and (min-width: 768px) {
   .cardColumn {
     display: inline-flex;
     justify-content: center;
@@ -338,10 +277,6 @@ h1 {
 /* Style background-image for screens greater than 1025 px.
 1025px — 1200px: Desktops, large screens */
 @media only screen and (min-width: 1025px) {
-  .background_img_container {
-    padding: 0px 80px;
-  }
-
   .card {
     width: 28% !important;
   }
@@ -350,10 +285,6 @@ h1 {
 /* Style background-image for screens greater than 1201 px.
 1201px and more — Extra large screens, TV. */
 @media only screen and (min-width: 1201px) {
-  .background_img_container {
-    padding: 0px 90px;
-  }
-
   .rowDefault {
     justify-content: center !important;
   }
