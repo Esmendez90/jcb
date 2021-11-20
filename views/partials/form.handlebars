@@ -1,23 +1,41 @@
-<form class="input_container">
-  <input
-    id="city_search"
-    type="text"
-    name="search"
-    style="margin-left: 17px"
-    placeholder="City Name"
-    required
-  />
+<form>
+  <p>Properties in New Jersey</p>
+  <div class="input-group col-md-12">
 
-  <input
-    id="state_search"
-    type="text"
-    name="search"
-    placeholder="State Initials"
-    required
-  />
-  <span class="span_search_lense">
-    <button id="search_btn" type="submit">
-      <i class="fa fa-search"></i>
-    </button>
-  </span>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="City"
+      aria-label="City"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Zip Code"
+      aria-label="Zip Code"
+    />
+  </div>
+
+  <div class="col-md-12">
+
+    <label for="customRange2" class="form-label">Price:</label>
+    <input type="range" class="form-range" min="0" max="100" id="customRange2" />
+
+
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Beds</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+    </select>
+  </div>
+
+  <div class="btn-container">
+    <button
+      class="btn btn-outline-secondary"
+      type="button"
+      id="search-btn"
+    >Search</button>
+  </div>
 </form>
