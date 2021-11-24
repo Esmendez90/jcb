@@ -67,7 +67,7 @@ h1 {
 
 .aboutMe-col {
   text-align: center;
-  margin-top: 20px;
+  margin: 20px auto;
   color: white;
 }
 
@@ -121,8 +121,8 @@ h1 {
 }
 
 .card {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: #febd69;
   width: 100%;
   border: 1px solid rgb(87, 86, 86);
   text-align: center;
@@ -131,7 +131,7 @@ h1 {
 .card i {
   font-size: 40px;
   padding: 5px;
-  border: solid white;
+  border: solid black;
   border-radius: 10px;
 
 }
@@ -141,10 +141,10 @@ h1 {
 }
 
 .btn-secondary {
-  width: 45%;
-  background-color: #febd69 !important;
+  width: 60%;
+  background-color: rgb(87, 86, 86);
   box-shadow: 1px 1px rgb(87, 86, 86);
-  border-color: #fca739;
+  border-color: rgb(87, 86, 86);
   border-width: thick;
   text-shadow: 1px 0.5px black;
 }
@@ -154,7 +154,7 @@ h1 {
 }
 
 .btn-secondary:hover {
-  border-color: rgb(87, 86, 86);
+  border-color: rgb(133, 132, 132);
 }
 
 /* Form styling */
