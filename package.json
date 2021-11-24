@@ -1,0 +1,27 @@
+{
+  "name": "jcb",
+  "version": "1.0.0",
+  "description": "As a person, who likes to know what properties are for sale/rent near my area, I want to be able to search properties by entering my town's name and state initials or by zip code.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Esmendez90/jcb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Esmendez90/jcb/issues"
+  },
+  "homepage": "https://github.com/Esmendez90/jcb#readme"
+}
