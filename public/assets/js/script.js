@@ -1,6 +1,6 @@
 console.log("is this even working");
-let rentalListing = document.getElementById("rentalListing");
-let city = "west new york";
+
+let city = "west new york"; // should be user input
 city = encodeURI(city);
 console.log(city);
 
@@ -20,9 +20,7 @@ $.ajax(settings).done(function (response) {
   showListings(response.listings);
 });
 
-
 function showListings(listings) {
-  rentalListing.style.display = "block";
   for (let i = 0; i < listings.length; i++) {
     let propPhoto = listings[i].photo;
     let propStatus = listings[i].prop_status;
@@ -35,19 +33,19 @@ function showListings(listings) {
       propPhoto = listings[i].photo;
     } else if ((propPhoto = "undefined")) {
       propPhoto =
-        "https://i0.wp.com/reviveyouthandfamily.org/wp-content/uploads/2016/11/house-placeholder.jpg?ssl=1";
+        "https://images.freeimages.com/images/large-previews/338/house-2-1225477.jpg";
     }
 
     $("#propListing").append(
       `
-      <div id="cardListing" class="card">
-        <img src="${propPhoto}" id="propertyImg" class="card-img-top" alt="Property house" />
+      <div class="card cardListing">
+        <img src="${propPhoto}" class="card-img-top propertyImg" alt="Property house" />
           <div class="card-body">
-            <p class="card-text">Property Status: ${propStatus}</p>
-             <p class="card-text">Price: ${propPrice}</p>
-             <p class="card-text">Address: ${propAddress}</p>
-             <p class="card-text">Bathrooms: ${propBaths}</p>
-            <p class="card-text">Beds: ${propBeds}</p>
+             <p class="card-text">PRICE: <span>${propPrice}</span></p>
+             <p class="card-text">ADDRESS: <span>${propAddress}</span></p>
+             <p class="card-text">BATHROOMS: <span>${propBaths}</span></p>
+             <p class="card-text">BEDS: <span>${propBeds}</span></p>
+             <p class="card-text">STATUS: <span>${propStatus}</span></p>
           </div>
       </div>
       `

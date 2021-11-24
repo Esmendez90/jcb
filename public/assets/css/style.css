@@ -133,7 +133,6 @@ h1 {
   padding: 5px;
   border: solid black;
   border-radius: 10px;
-
 }
 
 .card h4 {
@@ -200,6 +199,34 @@ form p,
   margin: 20px;
 }
 
+/* Rentals Styling */
+.listingContainer {
+  margin: 20px auto;
+}
+
+#propListing {
+  background-color: black;
+}
+
+.cardListing {
+  margin-bottom: 10px;
+  background-color: rgb(87 86 86);
+  color: white;
+  text-shadow: 1px 1px black;
+  text-align: initial;
+}
+
+.propertyImg {
+  height: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cardListing {
+    width: 30%;
+    margin: 10px;
+  }
+}
+
 /* Mobile responsive styling */
 /* @media only screen and (min-width: 300px) and (max-width: 460px) { */
 /* h1 {
@@ -262,7 +289,7 @@ form p,
 
 /* Style background-image for screens greater than 769px. 
 769px — 1024px: Small screens, laptops*/
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .cardColumn {
     display: inline-flex;
     justify-content: center;
@@ -277,7 +304,7 @@ form p,
     margin: 0px 5px;
     box-shadow: rgb(209 209 213) 0px 5px 15px;
   }
-}
+} */
 
 /* Style background-image for screens greater than 1025 px.
 1025px — 1200px: Desktops, large screens */
