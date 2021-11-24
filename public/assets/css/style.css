@@ -181,10 +181,20 @@ form p,
   width: fit-content;
   margin: 10px 0 20px;
 }
-#search-btn {
+#search-btn, #cityName-Btn {
   background-color: #febd69;
   color: white;
   text-shadow: 1px 1px rgb(87 86 86);
+}
+
+#cityInput {
+    width: auto;
+    height: 45px;
+    border: solid rgb(219, 218, 218);
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 5px;
+    margin: auto;
 }
 
 .span_search_lense:active {
@@ -218,6 +228,30 @@ form p,
 
 .propertyImg {
   height: 200px;
+}
+
+/* City input name styling */
+.searchBox-cards-container {
+  position: relative;
+}
+
+.cityNameContainer {
+  width: 100%;
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.cityInnerContainer {
+  width: 100%;
+}
+
+#cityName-btn {
+  margin: auto;
 }
 
 @media only screen and (min-width: 768px) {

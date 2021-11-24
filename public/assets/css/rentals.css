@@ -35,11 +35,11 @@
   margin: 10px auto;
 }
 
-#zipCodeContainer {
+/* #zipCodeContainer {
   display: none;
   text-align: center;
   margin: 20px auto;
-}
+} */
 
 /* #cardPropType {
   margin: 0px auto;
@@ -61,13 +61,12 @@
   margin: 10px 5px 6px;
 }
 
-#zipCodeBtn {
+/* #zipCodeBtn {
   color: white;
   text-shadow: 1px 1px rgb(82, 81, 81);
   background-color: #febd69;
-  border-style: none;
-  box-shadow: 2px 2px rgb(34 111 146);
-}
+  border-radius: 5px;
+} */
 
 /* @media only screen and (min-width: 768px) {
   #propListing {

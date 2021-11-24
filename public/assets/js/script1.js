@@ -2,7 +2,7 @@ let rentalListing = document.getElementById("rentalListing");
 let propStatus = document.getElementById("propStatus");
 let citySearch = document.getElementById("city_search");
 let stateSearch = document.getElementById("state_search");
-let zipCodeContainer = document.getElementById("zipCodeContainer");
+let cityNameContainer = document.getElementByClassName("cityNameContainer");
 let codeInput = document.getElementById("codeInput");
 let city;
 let state;
@@ -61,7 +61,7 @@ function choosePropStatus() {
 
 // Enter zip code input
 function enterZipCode() {
-  zipCodeContainer.style.display = "block";
+  cityNameContainer.style.display = "block";
 
   $("#zipCodeBtn").on("click", function (event) {
     event.preventDefault();
