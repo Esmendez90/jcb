@@ -181,7 +181,8 @@ form p,
   width: fit-content;
   margin: 10px 0 20px;
 }
-#search-btn, #cityName-Btn {
+#search-btn {
+  margin-top: 10px;
   background-color: #febd69;
   color: white;
   text-shadow: 1px 1px rgb(87 86 86);
