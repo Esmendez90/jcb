@@ -20,7 +20,7 @@ $(".prop-form").on("submit", function (event) {
   event.preventDefault();
 
   cityName = $("#cityName").val().trim();
-  cityName = encodeURI(cityName);
+  // cityName = encodeURI(cityName);
   zipCode = $("#zipCode").val().trim();
   console.log(cityName, zipCode);
 
@@ -28,6 +28,8 @@ $(".prop-form").on("submit", function (event) {
 });
 
 function apiCall(cityName, zipCode) {
+   
+  cityName = encodeURI(cityName);
   console.log(cityName, zipCode);
   const settings = {
     async: true,
@@ -42,12 +44,17 @@ function apiCall(cityName, zipCode) {
 
   $.ajax(settings).done(function (response) {
     console.log(response.listings);
+    console.log(response.returned_rows);  
+    cityName = decodeURI(cityName);
+    console.log("aaahh", cityName);
+    $("#resultsHTML")[0].innerHTML = `Results for ${propTypeUrl} in <strong>${cityName}</strong>: ${response.returned_rows} found.`
     showListings(response.listings);
   });
 }
 
 function showListings(listings) {
   $(".cardListing").remove();
+  
 
   for (let i = 0; i < listings.length; i++) {
     let propPhoto = listings[i].photo;
@@ -64,6 +71,7 @@ function showListings(listings) {
         "https://images.freeimages.com/images/large-previews/338/house-2-1225477.jpg";
     }
 
+   
     $("#propListing").append(
       `
         <div class="card cardListing">

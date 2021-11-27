@@ -137,6 +137,12 @@ h1 {
   width: 45px;
 }
 
+#resultsHTML {
+  color: white;
+  margin: auto;
+  padding: 10px;
+}
+
 .card {
   color: black;
   background-color: #febd69;
@@ -175,7 +181,7 @@ h1 {
 
 /* Form styling */
 .prop-form {
-  display:none;
+  display: none;
   width: 90%;
   margin: 0px auto;
   padding: 10px;
@@ -213,13 +219,13 @@ h1 {
 }
 
 #cityInput {
-    width: auto;
-    height: 45px;
-    border: solid rgb(219, 218, 218);
-    border-radius: 5px;
-    border-width: 1px;
-    padding: 5px;
-    margin: auto;
+  width: auto;
+  height: 45px;
+  border: solid rgb(219, 218, 218);
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 5px;
+  margin: auto;
 }
 
 .span_search_lense:active {
@@ -255,11 +261,6 @@ h1 {
   height: 200px;
 }
 
-
-
-
-
-
 @media only screen and (min-width: 768px) {
   .cardListing {
     width: 30%;
@@ -267,44 +268,42 @@ h1 {
   }
 }
 
+#city_search,
+#state_search {
+  width: 50%;
+  margin: 5px 5px 2px !important;
+  border-radius: 14px;
+  border-style: solid;
+  border-color: rgb(219, 218, 218);
+  border-width: 1px;
+}
 
-  #city_search,
-  #state_search {
-    width: 50%;
-    margin: 5px 5px 2px !important;
-    border-radius: 14px;
-    border-style: solid;
-    border-color: rgb(219, 218, 218);
-    border-width: 1px;
-  }
+#state_search {
+  width: 30%;
+  margin-right: 0px !important;
+}
 
-  #state_search {
-    width: 30%;
-    margin-right: 0px !important;
-  }
+.span_search_lense {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #febd69;
+  width: 14%;
+  position: relative;
+  left: 2.4%;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
 
-  .span_search_lense {
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 0;
-    margin-left: 0;
-    background-color: #febd69;
-    width: 14%;
-    position: relative;
-    left: 2.4%;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-  }
-
-  #search_btn {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 9px;
-    background-color: #febd69;
-  }
-
+#search_btn {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 9px;
+  background-color: #febd69;
+}
 
 /* Style background-image for screens greater than 769px. 
 769px — 1024px: Small screens, laptops*/
