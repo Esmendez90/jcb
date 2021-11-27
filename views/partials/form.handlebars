@@ -1,7 +1,11 @@
 <form class="prop-form">
+  <div class="form-container">
+  <i class="fas fa-times"></i>
   <p>NEW JERSEY</p>
-  <div class="input-group col-md-12">
 
+  {{>checkBox}}
+
+  <div class="input-group">
     <input
       id="cityName"
       type="text"
@@ -10,7 +14,7 @@
       aria-label="City"
     />
     <input
-    id="zipCode"
+      id="zipCode"
       type="text"
       class="form-control"
       placeholder="Zip Code"
@@ -18,26 +22,12 @@
     />
   </div>
 
-  {{!-- <div class="col-md-12">
-
-    <label for="customRange2" class="form-label">Price:</label>
-    <input type="range" class="form-range" min="0" max="100" id="customRange2" />
-
-
-    <select class="form-select" aria-label="Default select example">
-      <option selected>Beds</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-      <option value="4">Four</option>
-    </select>
-  </div> --}}
-
   <div class="btn-container">
     <button
       class="btn btn-outline-secondary"
       type="submit"
       id="search-btn"
     >Search</button>
+  </div>
   </div>
 </form>

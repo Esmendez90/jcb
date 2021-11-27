@@ -4,8 +4,16 @@ let zipCode;
 
 if (location.pathname === "/rentals") {
   propTypeUrl = "rent";
+  $(".fa-times").css("display", "none");
+  $(".prop-form").css("display", "block");
+  $(".checkbox").css("display", "none");
+  apiCall("west new york", "07093");
 } else if (location.pathname === "/forsale") {
   propTypeUrl = "sale";
+  $(".fa-times").css("display", "none");
+  $(".prop-form").css("display", "block");
+  $(".checkbox").css("display", "none");
+  apiCall("union city", "07087");
 }
 
 $(".prop-form").on("submit", function (event) {
@@ -14,7 +22,13 @@ $(".prop-form").on("submit", function (event) {
   cityName = $("#cityName").val().trim();
   cityName = encodeURI(cityName);
   zipCode = $("#zipCode").val().trim();
+  console.log(cityName, zipCode);
 
+  apiCall(cityName, zipCode);
+});
+
+function apiCall(cityName, zipCode) {
+  console.log(cityName, zipCode);
   const settings = {
     async: true,
     crossDomain: true,
@@ -27,11 +41,14 @@ $(".prop-form").on("submit", function (event) {
   };
 
   $.ajax(settings).done(function (response) {
+    console.log(response.listings);
     showListings(response.listings);
   });
-});
+}
 
 function showListings(listings) {
+  $(".cardListing").remove();
+
   for (let i = 0; i < listings.length; i++) {
     let propPhoto = listings[i].photo;
     let propStatus = listings[i].prop_status;

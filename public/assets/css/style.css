@@ -26,6 +26,14 @@ header div {
   margin: 20px auto;
 }
 
+/* .prop-form {
+  display: none;
+} */
+
+.jcbLogo a {
+  text-decoration: none;
+}
+
 .menu,
 .fa-search {
   margin: 28px auto;
@@ -35,6 +43,15 @@ header div {
 
 .fa-search {
   margin: 6px auto;
+}
+
+.fa-search:hover {
+  text-shadow: 2px 2px #febd69;
+}
+
+.form-check-input:checked {
+  background-color: #febd69;
+  border-color: rgb(87 86 86);
 }
 
 h1 {
@@ -157,7 +174,8 @@ h1 {
 }
 
 /* Form styling */
-form {
+.prop-form {
+  display:none;
   width: 90%;
   margin: 0px auto;
   padding: 10px;
@@ -166,7 +184,7 @@ form {
   border-radius: 5px;
 }
 
-form p,
+.prop-form p,
 .btn-container {
   text-align: center;
 }
@@ -186,6 +204,12 @@ form p,
   background-color: #febd69;
   color: white;
   text-shadow: 1px 1px rgb(87 86 86);
+}
+
+.fa-times {
+  position: absolute;
+  right: 3%;
+  font-size: 20px;
 }
 
 #cityInput {
@@ -231,29 +255,10 @@ form p,
   height: 200px;
 }
 
-/* City input name styling */
-.searchBox-cards-container {
-  position: relative;
-}
 
-.cityNameContainer {
-  width: 100%;
-  display: none;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
 
-.cityInnerContainer {
-  width: 100%;
-}
 
-#cityName-btn {
-  margin: auto;
-}
+
 
 @media only screen and (min-width: 768px) {
   .cardListing {
@@ -262,27 +267,6 @@ form p,
   }
 }
 
-/* Mobile responsive styling */
-/* @media only screen and (min-width: 300px) and (max-width: 460px) { */
-/* h1 {
-    padding: 0;
-  } */
-
-/* .input_container {
-    position: absolute;
-    top: 20%;
-    overflow: auto;
-    width: 90%;
-    height: 21%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 14px;
-    border-style: solid;
-    border-color: rgb(219, 218, 218);
-    border-width: 1px;
-    overflow: hidden;
-  }
 
   #city_search,
   #state_search {
@@ -320,7 +304,7 @@ form p,
     margin-top: 9px;
     background-color: #febd69;
   }
-} */
+
 
 /* Style background-image for screens greater than 769px. 
 769px — 1024px: Small screens, laptops*/
