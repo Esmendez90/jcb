@@ -2,7 +2,27 @@ let propTypeUrl;
 let cityName;
 let zipCode;
 
-if (location.pathname === "/rentals") {
+if (location.pathname === "/") {
+  $(".search-icon").on("click", function (event) {
+    event.preventDefault();
+    $(".form-container").removeClass("animate__animated animate__backOutUp");
+    $(".prop-form-main").css("display", "block");
+    $(".form-container").addClass("animate__animated animate__backInDown");
+    $(".prop-form-main").css("position", "absolute");
+    $(".prop-form-main").css("z-index", "1");
+    $(".prop-form-main").css("transform", "translate(6%, 0%)");
+    $(".prop-form-main").css("background-color", "rgb(6 6 6 / 60%)");
+  });
+
+  $(".fa-times").on("click", function (event) {
+    event.preventDefault();
+    $(".form-container").addClass("animate__animated animate__backOutUp");
+    setTimeout(function () {
+      $(".prop-form-main").css("display", "none");
+    }, 0500);
+  });
+}
+else if (location.pathname === "/rentals") {
   propTypeUrl = "rent";
   $(".fa-times").css("display", "none");
   $(".prop-form").css("display", "block");
@@ -15,6 +35,18 @@ if (location.pathname === "/rentals") {
   $(".checkbox").css("display", "none");
   apiCall("union city", "07087");
 }
+
+$(".prop-form-main").on("submit", function (event) {
+  event.preventDefault();
+  console.log("ron ron ron!!!");
+  propTypeUrl = document.querySelector(
+    ".form-check-input[type=radio]:checked"
+  ).value;
+  cityName = $("#cityName").val().trim();
+  cityName = encodeURI(cityName);
+  zipCode = $("#zipCode").val().trim();
+  console.log(propTypeUrl, cityName, zipCode);
+});
 
 $(".prop-form").on("submit", function (event) {
   event.preventDefault();

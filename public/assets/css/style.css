@@ -181,7 +181,7 @@ h1 {
 }
 
 /* Form styling */
-.prop-form {
+.prop-form, .prop-form-main {
   display: none;
   width: 90%;
   margin: 0px auto;
@@ -191,6 +191,7 @@ h1 {
   border-radius: 5px;
 }
 
+.prop-form p,
 .prop-form p,
 .btn-container {
   text-align: center;
@@ -206,7 +207,7 @@ h1 {
   width: fit-content;
   margin: 10px 0 20px;
 }
-#search-btn {
+#search-prop-btn, #search-btn {
   margin-top: 10px;
   background-color: #febd69;
   color: white;

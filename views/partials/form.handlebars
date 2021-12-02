@@ -1,4 +1,4 @@
-<form class="prop-form">
+<form class={{class}}>
   <div class="form-container">
   <i class="fas fa-times"></i>
   <p>NEW JERSEY</p>
@@ -22,12 +22,6 @@
     />
   </div>
 
-  <div class="btn-container">
-    <button
-      class="btn btn-outline-secondary"
-      type="submit"
-      id="search-btn"
-    >Search</button>
-  </div>
+  {{>submitBtn}}
   </div>
 </form>
