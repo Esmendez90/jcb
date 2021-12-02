@@ -26,23 +26,24 @@ header div {
   margin: 20px auto;
 }
 
-/* .prop-form {
-  display: none;
-} */
-
 .jcbLogo a {
   text-decoration: none;
 }
 
-.menu,
+.jcbLogo img {
+  width: 70px;
+  height: auto;
+}
+
+.fa-bars,
 .fa-search {
-  margin: 28px auto;
   font-size: 22px;
   color: rgb(87 86 86);
 }
 
-.fa-search {
-  margin: 6px auto;
+.menu,
+.search-icon {
+  margin: 42px auto;
 }
 
 .fa-search:hover {
