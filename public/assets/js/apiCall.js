@@ -66,8 +66,8 @@ function apiCall(cityName, zipCode) {
     url: `https://realty-in-us.p.rapidapi.com/properties/list-for-${propTypeUrl}?state_code=NJ&city=${cityName}&limit=200&offset=0&postal_code=${zipCode}`,
     method: "GET",
     headers: {
-      "x-rapidapi-host": "realty-in-us.p.rapidapi.com",
-      "x-rapidapi-key": "fbf1849f58mshc4a745d4d24f860p128e2fjsn3c711de2d5ef",
+      "x-rapidapi-host": config.host,
+      "x-rapidapi-key": config.apiKey,
     },
   };
 

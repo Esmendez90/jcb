@@ -4,6 +4,7 @@
   "description": "As a person, who likes to know what properties are for sale/rent near my area, I want to be able to search properties by entering my town's name and state initials or by zip code.",
   "main": "server.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
     "handlebars": "^4.7.7"
