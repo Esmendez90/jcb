@@ -233,16 +233,6 @@ h1 {
   border: none !important;
 }
 
-/* #cityInput {
-  width: auto;
-  height: 45px;
-  border: solid rgb(219, 218, 218);
-  border-radius: 5px;
-  border-width: 1px;
-  padding: 5px;
-  margin: auto;
-} */
-
 .span_search_lense:active {
   border-style: solid;
   border-width: 3px;
@@ -283,21 +273,6 @@ h1 {
   }
 }
 
-/* #city_search,
-#state_search {
-  width: 50%;
-  margin: 5px 5px 2px !important;
-  border-radius: 14px;
-  border-style: solid;
-  border-color: rgb(219, 218, 218);
-  border-width: 1px;
-}
-
-#state_search {
-  width: 30%;
-  margin-right: 0px !important;
-} */
-
 .span_search_lense {
   padding: 0;
   margin-top: 0;
@@ -312,45 +287,10 @@ h1 {
   border-bottom-left-radius: 3px;
 }
 
-/* #search_btn {
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  margin-top: 9px;
-  background-color: #febd69;
-} */
-
-/* Style background-image for screens greater than 769px. 
-769px — 1024px: Small screens, laptops*/
-/* @media only screen and (min-width: 768px) {
-  .cardColumn {
-    display: inline-flex;
-    justify-content: center;
-  }
-
-  .btn-secondary {
-    width: 70%;
-  }
-
-  .card {
-    width: 31% !important;
-    margin: 0px 5px;
-    box-shadow: rgb(209 209 213) 0px 5px 15px;
-  }
-} */
-
-/* Style background-image for screens greater than 1025 px.
-1025px — 1200px: Desktops, large screens */
-@media only screen and (min-width: 1025px) {
-  .card {
-    width: 28% !important;
-  }
-}
-
 /* Style background-image for screens greater than 1201 px.
 1201px and more — Extra large screens, TV. */
-@media only screen and (min-width: 1201px) {
-  .rowDefault {
+@media only screen and (min-width: 1021px) {
+  .rowCards {
     justify-content: center !important;
   }
 
@@ -359,6 +299,6 @@ h1 {
   }
 
   .card {
-    width: 28% !important;
+    width: 33% !important;
   }
 }
