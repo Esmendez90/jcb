@@ -267,29 +267,25 @@ h1 {
 }
 
 @media only screen and (min-width: 768px) {
+  .listingContainer {
+    margin: 20px;
+    margin-right: -5px;
+}
+
+  #propListing {
+    display: contents;
+  }
   .cardListing {
-    width: 30%;
-    margin: 10px;
+    width: 32%;
+    margin: 5px;
   }
 }
 
-.span_search_lense {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 0;
-  margin-left: 0;
-  background-color: #febd69;
-  width: 14%;
-  position: relative;
-  left: 2.4%;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
+
 
 /* Style background-image for screens greater than 1201 px.
 1201px and more — Extra large screens, TV. */
-@media only screen and (min-width: 1021px) {
+@media only screen and (min-width: 1024px) {
   .rowCards {
     justify-content: center !important;
   }
@@ -299,6 +295,6 @@ h1 {
   }
 
   .card {
-    width: 33% !important;
+    width: 32% !important;
   }
 }
