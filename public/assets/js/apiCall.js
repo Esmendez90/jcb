@@ -72,6 +72,7 @@ function showListings(listings) {
     $("#propListing").append(
       `
         <div class="card cardListing">
+        <i class="far fa-star"></i>
           <img src="${propPhoto}" class="card-img-top propertyImg" alt="Property house" />
             <div class="card-body">
                <p class="card-text">PRICE: <span>${propPrice}</span></p>
