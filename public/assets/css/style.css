@@ -36,18 +36,18 @@ header div {
 }
 
 .fa-bars,
-.fa-search {
+.fa-user-circle {
   font-size: 22px;
   color: rgb(87 86 86);
 }
 
 .menu,
-.search-icon {
+.login-icon {
   margin: 42px auto;
 }
 
-.fa-search:hover {
-  text-shadow: 2px 2px #febd69;
+.fa-user-circle:hover {
+  text-shadow: 0px 1px #febd69;
 }
 
 .form-check-input:checked {
@@ -180,6 +180,10 @@ h1 {
   border-color: rgb(133, 132, 132);
 }
 
+.singIn-row {
+  justify-content: center;
+}
+
 /* Form styling */
 .prop-form, .prop-form-main {
   display: none;
@@ -207,7 +211,7 @@ h1 {
   width: fit-content;
   margin: 10px 0 20px;
 }
-#search-prop-btn, #search-btn {
+.btn-outline-secondary {
   margin-top: 10px;
   background-color: #febd69;
   color: white;
@@ -220,7 +224,7 @@ h1 {
   font-size: 20px;
 }
 
-#cityInput {
+/* #cityInput {
   width: auto;
   height: 45px;
   border: solid rgb(219, 218, 218);
@@ -228,7 +232,7 @@ h1 {
   border-width: 1px;
   padding: 5px;
   margin: auto;
-}
+} */
 
 .span_search_lense:active {
   border-style: solid;
@@ -270,7 +274,7 @@ h1 {
   }
 }
 
-#city_search,
+/* #city_search,
 #state_search {
   width: 50%;
   margin: 5px 5px 2px !important;
@@ -283,7 +287,7 @@ h1 {
 #state_search {
   width: 30%;
   margin-right: 0px !important;
-}
+} */
 
 .span_search_lense {
   padding: 0;
@@ -299,13 +303,13 @@ h1 {
   border-bottom-left-radius: 3px;
 }
 
-#search_btn {
+/* #search_btn {
   width: 100%;
   padding-left: 0;
   padding-right: 0;
   margin-top: 9px;
   background-color: #febd69;
-}
+} */
 
 /* Style background-image for screens greater than 769px. 
 769px — 1024px: Small screens, laptops*/
