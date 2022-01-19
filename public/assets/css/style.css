@@ -2,12 +2,13 @@ body {
   width: auto;
   margin: 0px;
   padding: 0px;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .row {
   margin-right: 0px;
   margin-left: 0px;
+  background-color: black;
 }
 .row > * {
   padding-right: 0px;
@@ -68,7 +69,15 @@ h1 {
 }
 
 .carousel {
-  margin-top: 20px;
+  /* background-color:rgb(87, 86, 86); */
+  background-image: linear-gradient(
+    black,
+    rgb(87, 86, 86),
+    rgb(87, 86, 86),
+    rgb(87, 86, 86),
+    black
+  );
+  padding: 20px 0px;
 }
 
 .carousel-item {
@@ -185,7 +194,8 @@ h1 {
 }
 
 /* Form styling */
-.prop-form, .prop-form-main {
+.prop-form,
+.prop-form-main {
   display: none;
   width: 90%;
   margin: 0px auto;
@@ -224,7 +234,7 @@ h1 {
   font-size: 20px;
 }
 
-.fa-star{
+.fa-star {
   position: absolute;
   right: 2%;
   top: 10px;
@@ -270,7 +280,7 @@ h1 {
   .listingContainer {
     margin: 20px;
     margin-right: -5px;
-}
+  }
 
   #propListing {
     display: contents;
@@ -280,8 +290,6 @@ h1 {
     margin: 5px;
   }
 }
-
-
 
 /* Style background-image for screens greater than 1201 px.
 1201px and more — Extra large screens, TV. */

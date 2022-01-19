@@ -43,6 +43,7 @@ function apiCall(cityName, zipCode) {
   };
 
   $.ajax(settings).done(function (response) {
+    console.log(propTypeUrl);
     cityName = decodeURI(cityName);
     $(
       "#resultsHTML"
