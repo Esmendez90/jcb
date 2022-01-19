@@ -2,7 +2,7 @@ body {
   width: auto;
   margin: 0px;
   padding: 0px;
-  /* background-color: black; */
+  background-color: rgb(235, 232, 232);
 }
 
 .row {
@@ -94,8 +94,10 @@ h1 {
 
 .aboutMe-col {
   text-align: center;
-  margin: 20px auto;
-  color: white;
+  margin: 0 auto 20px;
+  padding: 15px 0;
+  color: black;
+  background-color: rgb(87, 86, 86);
 }
 
 .aboutMe-col h1 {
