@@ -21,11 +21,15 @@ header {
   justify-content: center;
   border-top-style: solid;
   border-color: #febd69;
-  border-width: 4px;
+  border-width: 10px;
 }
 
 header div {
   margin: 20px auto;
+}
+
+.jcbLogo {
+  display: flex;
 }
 
 .jcbLogo a {
@@ -33,19 +37,24 @@ header div {
 }
 
 .jcbLogo img {
-  width: 70px;
-  height: auto;
+  width: 100px;
+  height: 100px;
+}
+
+.jcbLogo h1 {
+  width: min-content;
+  margin-left: 5px;
 }
 
 .fa-bars,
 .fa-user-circle {
-  font-size: 22px;
+  font-size: 30px;
   color: rgb(87 86 86);
 }
 
 .menu,
 .login-icon {
-  margin: 42px auto;
+  margin: 60px auto;
 }
 
 .fa-user-circle:hover {
@@ -70,15 +79,27 @@ h1 {
 }
 
 .carousel,
-.aboutMe-col {
+.aboutMe-col,
+.cardColumn {
   background-image: linear-gradient(
-    black,
+    rgba(0, 0, 0),
     rgb(87, 86, 86),
     rgb(87, 86, 86),
     rgb(87, 86, 86),
     black
   );
   padding: 20px 0px;
+}
+
+.carousel {
+  margin-top: -12px;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgb(87, 86, 86),
+    rgb(87, 86, 86),
+    rgb(87, 86, 86),
+    black
+  );
 }
 
 .carousel-item {
@@ -95,13 +116,13 @@ h1 {
 
 .aboutMe-col {
   text-align: center;
-  margin: 10px auto 20px;
+  margin: 10px auto;
   padding: 15px 0;
   color: white;
 }
 
 .aboutMe-col h1 {
-  font-size: 40px;
+  font-size: 35px;
   font-family: auto;
   margin-bottom: 0px;
 }
@@ -128,7 +149,7 @@ h1 {
 }
 
 .cardColumn {
-  padding: 22px;
+  padding: 22px 22px 12px;
   margin-bottom: 0;
 }
 
@@ -141,6 +162,8 @@ h1 {
   text-align: center;
   border-top: solid;
   border-color: #febd69;
+  border-width: 10px;
+  padding: 20px;
   background-color: black;
 }
 
