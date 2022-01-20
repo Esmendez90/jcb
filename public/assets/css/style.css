@@ -195,6 +195,10 @@ h1 {
   padding: 10px 8px;
 }
 
+.column-container i {
+  font-size: 30px;
+}
+
 .contact-col li {
   display: inline-flex;
   margin: 10px;
