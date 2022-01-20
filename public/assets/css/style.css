@@ -16,12 +16,12 @@ body {
 }
 
 header {
-  background-color: black;
   display: inline-flex;
   justify-content: center;
   border-top-style: solid;
   border-color: #febd69;
   border-width: 10px;
+  background-image: linear-gradient(black, black, rgb(87, 86, 86));
 }
 
 header div {
