@@ -44,6 +44,7 @@ header div {
 .jcbLogo h1 {
   width: min-content;
   margin-left: 5px;
+  text-shadow: 1px 1px rgb(87 86 86);
 }
 
 .fa-bars,
