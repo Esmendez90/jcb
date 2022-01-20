@@ -128,27 +128,27 @@ h1 {
   margin-bottom: 0px;
 }
 
-.aboutMe-col p {
-  font-family: cursive;
-  font-size: 30px;
-}
-
 .jennifer-photo {
   width: 40%;
   height: auto;
-  border-radius: 73px;
+  border-radius: 80px;
+  margin: 25px auto;
 }
 
+.aboutMe-col p,
 .aboutMe-text {
   margin: 10px auto;
   padding: 2px;
   width: 85%;
   text-align: justify;
-  text-decoration: none !important;
-  font-size: 16px !important;
-  font-family: auto !important;
+  font-size: 20px;
+  font-family: auto;
 }
+.question {
+  font-size: 30px !important;
 
+  text-align: center !important;
+}
 .cardColumn {
   padding: 22px 22px 12px;
   margin-bottom: 0;
