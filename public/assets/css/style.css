@@ -129,7 +129,7 @@ footer {
 
 .aboutMe-col h1 {
   font-size: 35px;
-  font-family: auto;
+  font-family: "Times New Roman", serif;
   margin-bottom: 0px;
 }
 
@@ -147,12 +147,13 @@ footer {
   width: 85%;
   text-align: justify;
   font-size: 20px;
-  font-family: auto;
+  font-family: "Times New Roman", serif;
 }
 .question {
   font-size: 30px !important;
-
   text-align: center !important;
+  background-color: #b3b0b0;
+  width: 100% !important;
 }
 .cardColumn {
   padding: 22px 22px 12px;
@@ -164,8 +165,8 @@ footer {
 }
 
 .contact-col {
-  height: 290px;
-  padding: 30px;
+  height: 310px;
+  padding: 15px 30px 30px;
   margin-top: 10px;
   color: white;
   text-align: center;
@@ -206,21 +207,35 @@ footer {
 
 .contact-col li {
   display: inline-flex;
-  margin: 10px;
+  background-color: rgba(192, 192, 192, 0.9);
+  border-radius: 0.25rem;
+  padding: 8px;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 16px;
 }
 
 .contact-icons {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  font-size: 45px;
+  color: white;
 }
 
-.cellphone {
-  border-radius: 18px;
+.contact-icons-ul {
+  padding-left: 0;
 }
 
-.gmail {
-  width: 45px;
+.phoneText {
+  font-size: 20px;
+}
+
+.phoneText a {
+  color: white;
+  text-decoration: none;
+}
+
+.phoneText a:hover {
+  text-decoration: underline;
 }
 
 #resultsHTML {

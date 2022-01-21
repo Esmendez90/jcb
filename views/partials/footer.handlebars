@@ -1,26 +1,12 @@
 <div class="row">
   <footer class="col-md-12 contact-col">
-    <p class="text">For request or inquiries contact me through my social media,
-      call, or send me an email.</p>
-
-    <ul class="contact-icons-ul">
-      <a href="https://www.facebook.com/jennifer.mendez.752" target="_blank"><li
-        >
-          <img src="/assets/images/facebook-icon.png" class="contact-icons" />
-        </li></a>
-      <a href="https://www.instagram.com/jenniferjael/?hl=en" target="_blank">
-        <li>
-          <img src="/assets/images/instagram-icon.png" class="contact-icons" />
-        </li></a>
-      <li><img
-          src="/assets/images/cell-icon.png"
-          class="contact-icons cellphone"
-        /></li>
-      <a href="mailto:jjael8919@gmail.com" target="_blank"><li><img
-            src="/assets/images/gmail-icon.png"
-            class="contact-icons gmail"
-          /></li></a>
-    </ul>
+     <ul class="contact-icons-ul">
+      {{>liElement hrefAttr="mailto:j.mendez@kw.com" fas-fa-class="fas fa-envelope"}}
+      {{>liElement hrefAttr="https://www.messenger.com/t/114704715925203/?messaging_source=source%3Apages%3Amessage_shortlink" fas-fa-class="fab fa-facebook-messenger"}}
+      {{>liElement hrefAttr="https://www.facebook.com/JCBrealEstateServices" fas-fa-class="fab fa-facebook"}}     
+      {{>liElement hrefAttr="https://api.whatsapp.com/send?phone=12017326844&amp;text=Hi there! I have a question" fas-fa-class="fab fa-whatsapp"}}  
+     </ul>
+    <p class="phoneText">Reach out to me with questions and inquires or call me to:<br/> <a href="tel: 201-732-6844">201-732-6844</a></p>
     <p class="m-0 text-center text-white">
       Copyright &copy; 2021
     </p>
