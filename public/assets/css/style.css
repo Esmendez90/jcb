@@ -142,7 +142,7 @@ footer {
 
 .aboutMe-col p,
 .aboutMe-text {
-  margin: 10px auto;
+  margin: 20px auto;
   padding: 2px;
   width: 85%;
   text-align: justify;
@@ -154,6 +154,11 @@ footer {
   text-align: center !important;
   background-color: #b3b0b0;
   width: 100% !important;
+}
+
+.aboutMe-text span {
+  background-color: white;
+  padding: 5px;
 }
 .cardColumn {
   padding: 22px 22px 12px;
