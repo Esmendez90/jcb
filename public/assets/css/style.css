@@ -53,6 +53,10 @@ header div {
   color: #febd69;
 }
 
+.fa-bars {
+  font-size: 28px;
+}
+
 .menu,
 .login-icon {
   margin: 60px auto;
