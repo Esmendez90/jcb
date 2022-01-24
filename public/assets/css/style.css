@@ -2,7 +2,6 @@ body {
   width: auto;
   margin: 0px;
   padding: 0px;
-  background-color: rgba(192, 192, 192, 0.7);
 }
 
 .row {
@@ -17,50 +16,57 @@ body {
 
 header {
   display: inline-flex;
-  justify-content: center;
+  /* justify-content: center; */
   border-top-style: solid;
   border-color: #febd69;
   border-width: 10px;
   background-image: linear-gradient(black, black, rgb(87, 86, 86));
 }
 
-header div {
+/* header div {
   margin: 20px auto;
-}
+} */
 
 .jcbLogo {
   display: flex;
 }
 
-.jcbLogo a {
-  text-decoration: none;
+.columnJCB {
+  width: 100%;
 }
+
+ .columnJCB a {
+  text-decoration: none;
+} 
 
 .jcbLogo img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 }
 
-.jcbLogo h1 {
-  width: min-content;
-  margin: 3px 5px;
-  text-shadow: 2px 1px rgb(87 86 86);
+.columnJCB p {
+  font-size: 22px;
+  font-family: "Times New Roman", serif;
+  margin: 10px 20px;
+  color: #febd69;
+  text-shadow: 1px 1px rgb(87 86 86);
+}
+
+.logos-container {
+  width: 100%;
+  display: inline-flex;
+  padding-right: 15px;
+  justify-content: right;
 }
 
 .fa-bars,
 .fa-user-circle {
-  font-size: 30px;
+  font-size: 22px;
   color: #febd69;
+  margin-right: 15px;
 }
 
-.fa-bars {
-  font-size: 28px;
-}
 
-.menu,
-.login-icon {
-  margin: 60px auto;
-}
 
 .fa-user-circle:hover {
   text-shadow: 0px 1px #febd69;
@@ -185,17 +191,16 @@ footer {
 }
 
 .stickyRow {
-  position: fixed;
-  bottom: -1px;
   width: 100%;
-  height: 65px;
-  background-color: #febd69;
+  height: 40px;
+  padding: 0;
   z-index: 1;
-  border-top: 2px solid black;
+  background-image: linear-gradient(rgb(87, 86, 86), black, black);
 }
 
 .stickyBtn-container {
   display: flex;
+  height: inherit;
 }
 
 .stickyBtn-container div {
@@ -203,15 +208,21 @@ footer {
 }
 
 .column-container {
-  border-right: 1px solid black;
+  border-right: 1px solid rgb(87, 86, 86);
 }
 
 .column-container div {
-  padding: 0px 15px;
+  padding: 0px 25px;
 }
 
 .column-container i {
-  font-size: 30px;
+  font-size: 20px;
+  color: white;
+}
+
+.column-container p {
+  font-size: 10px;
+  color: white;
 }
 
 .contact-col li {
