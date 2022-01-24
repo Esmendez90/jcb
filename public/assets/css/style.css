@@ -126,6 +126,10 @@ footer {
   z-index: 1;
 }
 
+.carousel-control-next, .carousel-control-prev {
+  top: 260px;
+}
+
 .carousel-item {
   width: 100%;
 }
