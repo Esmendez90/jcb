@@ -88,11 +88,22 @@ header {
   font-weight: bold;
 }
 
-.text {
+.text, .radioBtns-container {
   color: rgb(195, 9, 90) !important;
   font-weight: normal !important;
   font-size: 18px !important;
 }
+
+.radioBtns-container {
+  color: black !important;
+  padding: 15px;
+}
+
+.radioBtns-container div {
+  margin: 12px auto;
+}
+
+
 
 .latest-listForm i {
   display: none;
