@@ -16,11 +16,10 @@ body {
 
 header {
   display: inline-flex;
-  /* justify-content: center; */
   border-top-style: solid;
   border-color: #febd69;
   border-width: 10px;
-  background-image: linear-gradient(black, black, rgb(87, 86, 86));
+  background-image: linear-gradient(black, black, black, rgb(87, 86, 86));
 }
 
 .jcbLogo {
@@ -88,7 +87,8 @@ header {
   font-weight: bold;
 }
 
-.text, .radioBtns-container {
+.text,
+.radioBtns-container {
   color: rgb(195, 9, 90) !important;
   font-weight: normal !important;
   font-size: 18px !important;
@@ -103,7 +103,19 @@ header {
   margin: 12px auto;
 }
 
+input[type="radio" i] {
+  appearance: none;
+  padding: 6px;
+  margin: 3px 3px 0px 5px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: auto;
+}
 
+input[type="radio"]:checked {
+  background: radial-gradient(rgb(195, 9, 90), transparent);
+}
 
 .latest-listForm i {
   display: none;
@@ -137,7 +149,8 @@ footer {
   z-index: 1;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
   top: 260px;
 }
 
@@ -237,6 +250,10 @@ footer {
 
 .column-container div {
   padding: 0px 25px;
+}
+
+.stickyBtns {
+  padding: 0.2rem 0.75rem;
 }
 
 .column-container i {
