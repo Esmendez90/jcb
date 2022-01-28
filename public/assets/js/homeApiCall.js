@@ -79,62 +79,56 @@ function daysLastUpdate(x) {
 
 function filterLatestListings(newArr) {
   console.log(newArr);
-
-   newArr.filter((obj) => {
+  //  returns only listings with 7 or less days since last update
+  newArr.filter((obj) => {
     if (obj.days_since_last_update <= 7) {
       latestListings.push(obj);
     }
   });
 
   console.log(latestListings);
-
+  showLatestListings(latestListings);
 }
 
-function showLatestList(listings) {
+function showLatestListings(listings) {
   //   $(".cardListing").remove();
 
   for (let i = 0; i < listings.length; i++) {
-    let propPhoto = listings[i].photo;
-    let propStatus = listings[i].prop_status;
-    let propPrice = listings[i].price;
-    let propAddress = listings[i].address;
-    let propBaths = listings[i].baths;
-    let propBeds = listings[i].beds;
+    let photo = listings[i].photo;
+    let status = listings[i].prop_status;
+    let price = listings[i].price;
+    let address = listings[i].address;
+    let baths = listings[i].baths;
+    let beds = listings[i].beds;
+    let type = listings[i].prop_type;
 
-    if (propPhoto) {
-      propPhoto = listings[i].photo;
-    } else if ((propPhoto = "undefined")) {
-      propPhoto =
+    if (photo) {
+      photo = photo;
+    } else if ((photo = "undefined")) {
+      photo =
         "https://images.freeimages.com/images/large-previews/338/house-2-1225477.jpg";
     }
 
-    appendToCard(
-      propPhoto,
-      propPrice,
-      propStatus,
-      propAddress,
-      propBaths,
-      propBeds
-    );
+    appendToCard(photo, price, status, address, baths, beds, type);
   }
 }
 
-function appendToCard(...propDetails) {
-  console.log(...propDetails);
-  // $("#propListing").append(
-  //   `<div class="carousel-item">
-  //     <div class="card cardListing">
-  //     <i class="far fa-star"></i>
-  //       <img src="${propPhoto}" class="card-img-top propertyImg" alt="Property house" />
-  //         <div class="card-body">
-  //            <p class="card-text">PRICE: <span>${propPrice}</span></p>
-  //            <p class="card-text">ADDRESS: <span>${propAddress}</span></p>
-  //            <p class="card-text">BATHROOMS: <span>${propBaths}</span></p>
-  //            <p class="card-text">BEDS: <span>${propBeds}</span></p>
-  //            <p class="card-text">STATUS: <span>${propStatus}</span></p>
-  //         </div>
-  //     </div>
-  // </div>
-  //   `
-  // );
+function appendToCard(photo, price, status, address, baths, beds, type) {
+  $("#propListing").append(
+    `
+      <div class="card cardListing">
+      <i class="far fa-star"></i>
+        <img src="${photo}" class="card-img-top propertyImg" alt="Property house" />
+          <div class="card-body">
+             <p class="card-text">PRICE: <span>${price}</span></p>
+             <p class="card-text">ADDRESS: <span>${address}</span></p>
+             <p class="card-text">BATHROOMS: <span>${baths}</span></p>
+             <p class="card-text">BEDS: <span>${beds}</span></p>
+             <p class="card-text">STATUS: <span>${status}</span></p>
+             <p class="card-text">TYPE: <span>${type}</span></p>
+          </div>
+      </div>
+  
+    `
+  );
 }
