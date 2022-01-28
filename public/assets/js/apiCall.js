@@ -32,7 +32,7 @@ function apiCall(cityName, zipCode) {
   const settings = {
     async: true,
     crossDomain: true,
-    url: `https://realty-in-us.p.rapidapi.com/properties/v2/list-for-${propTypeUrl}?state_code=NJ&city=${cityName}&limit=200&offset=0&postal_code=${zipCode}`,
+    url: `https://realty-in-us.p.rapidapi.com/properties/list-for-${propTypeUrl}?state_code=NJ&city=${cityName}&limit=200&offset=0&postal_code=${zipCode}`,
     method: "GET",
     headers: {
       "x-rapidapi-host": config.host,

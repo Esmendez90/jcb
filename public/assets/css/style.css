@@ -18,7 +18,7 @@ header {
   display: inline-flex;
   border-top-style: solid;
   border-color: #febd69;
-  border-width: 10px;
+  border-width: 1px;
   background-image: linear-gradient(black, black, black, rgb(87, 86, 86));
 }
 
@@ -96,7 +96,7 @@ header {
 
 .radioBtns-container {
   color: black !important;
-  padding: 15px;
+  padding: 15px 15px 0px;
 }
 
 .radioBtns-container div {
@@ -151,7 +151,7 @@ footer {
 
 .carousel-control-next,
 .carousel-control-prev {
-  top: 260px;
+  top: 400px;
 }
 
 .carousel-item {
