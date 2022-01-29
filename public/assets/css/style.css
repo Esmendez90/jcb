@@ -18,7 +18,7 @@ header {
   display: inline-flex;
   border-top-style: solid;
   border-color: #febd69;
-  border-width: 1px;
+  border-width: 2px;
   background-image: linear-gradient(black, black, black, rgb(87, 86, 86));
 }
 
