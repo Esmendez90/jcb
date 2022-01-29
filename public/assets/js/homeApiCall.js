@@ -109,6 +109,8 @@ function showLatestListings(listings) {
         "https://images.freeimages.com/images/large-previews/338/house-2-1225477.jpg";
     }
 
+
+
     appendToCard(photo, price, status, address, baths, beds, type);
   }
 }
@@ -116,16 +118,22 @@ function showLatestListings(listings) {
 function appendToCard(photo, price, status, address, baths, beds, type) {
   $("#propListing").append(
     `
-      <div class="card cardListing">
-      <i class="far fa-star"></i>
+      <div class="cardListing">
+        <i class="far fa-star"></i>
         <img src="${photo}" class="card-img-top propertyImg" alt="Property house" />
           <div class="card-body">
-             <p class="card-text">PRICE: <span>${price}</span></p>
-             <p class="card-text">ADDRESS: <span>${address}</span></p>
-             <p class="card-text">BATHROOMS: <span>${baths}</span></p>
-             <p class="card-text">BEDS: <span>${beds}</span></p>
-             <p class="card-text">STATUS: <span>${status}</span></p>
-             <p class="card-text">TYPE: <span>${type}</span></p>
+          <div><p class="card-text">${type}</p>  <p class="card-text">${status}</p></div>
+            
+              <p class="card-text" style="font-weight: bold;
+                 font-size: 20px;">${price}</p>
+             
+            <div style="display: inline-flex;">
+             <p class="card-text" style="margin-right: 15px;"><strong>${baths}</strong> bath(s)</p>
+             <p class="card-text"><strong>${beds}</strong> bed(s)</p>
+            </div>
+             <p class="card-text" style="white-space: pre-wrap;">${address}</p>
+            
+             
           </div>
       </div>
   
