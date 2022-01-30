@@ -154,12 +154,13 @@ footer {
   margin-bottom: 0;
 }
 
-.resultsClass {
-  margin-top: 10px;
+#resultsId {
+  margin-top: 15px;
   margin-bottom: 0px;
   text-align: left !important;
   font-size: 16px !important;
   font-weight: normal !important;
+  color: rgb(31, 56, 172);
 }
 
 /* .carousel-indicators {

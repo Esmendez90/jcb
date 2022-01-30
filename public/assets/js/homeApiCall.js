@@ -4,6 +4,7 @@ let selectProp;
 let today;
 let listings = [];
 let x;
+let newArr = [];
 let res = [];
 let latestListings = [];
 
@@ -14,7 +15,7 @@ function getTodayDate() {
   let yyyy = today.getFullYear();
 
   today = `${yyyy}-${mm}-${dd}`;
-  console.log(today);
+  //console.log(today);
 }
 
 $(".latest-listForm").on("submit", function (event) {
@@ -28,7 +29,14 @@ $(".latest-listForm").on("submit", function (event) {
     if (ele[i].checked) selectProp = ele[i].value.toLowerCase();
   }
 
-  // console.log(cityName, zipCode, selectProp);
+  listings = [];
+  x;
+  newArr = [];
+  res = [];
+  latestListings = [];
+  $(".cardListing").remove();
+
+  //console.log(cityName, zipCode, selectProp);
   getTodayDate();
   apiCall(cityName, zipCode, selectProp);
 });
@@ -48,7 +56,7 @@ function apiCall(cityName, zipCode, propType) {
 
   $.ajax(settings).done(function (response) {
     listings = response.listings;
-    // console.log(listings);
+    //console.log(listings);
     // Formatting date of last_update
     x = listings.map((obj) => {
       return obj.last_update.split("T").join("").slice(0, 10);
@@ -69,16 +77,17 @@ function daysLastUpdate(x) {
     res.push(d);
   }
   // Transforming each object to include new property
-  let newArr = listings.map((obj, index) => ({
+  newArr = listings.map((obj, index) => ({
     ...obj,
     days_since_last_update: res[index],
   }));
 
+  // console.log(newArr);
   filterLatestListings(newArr);
 }
 
 function filterLatestListings(newArr) {
-  console.log(newArr);
+  //console.log(newArr);
   //  returns only listings with 7 or less days since last update
   newArr.filter((obj) => {
     if (obj.days_since_last_update <= 7) {
@@ -86,12 +95,16 @@ function filterLatestListings(newArr) {
     }
   });
 
-  console.log(latestListings);
+  // console.log(latestListings);
   showLatestListings(latestListings);
 }
 
 function showLatestListings(listings) {
-  //   $(".cardListing").remove();
+  document.getElementById(
+    "resultsId"
+  ).innerHTML = `<span style="color:rgb(195, 9, 90)">Showing results from last <strong>7</strong> days.</span> <br>Results for <strong>${selectProp}</strong> in <strong>${cityName.toUpperCase()}</strong>: ${
+    latestListings.length
+  } found. `;
 
   for (let i = 0; i < listings.length; i++) {
     let photo = listings[i].photo;
@@ -109,8 +122,6 @@ function showLatestListings(listings) {
         "https://images.freeimages.com/images/large-previews/338/house-2-1225477.jpg";
     }
 
-
-
     appendToCard(photo, price, status, address, baths, beds, type);
   }
 }
@@ -119,7 +130,6 @@ function appendToCard(photo, price, status, address, baths, beds, type) {
   $("#propListing").append(
     `
       <div class="cardListing">
-        <i class="far fa-star"></i>
         <img src="${photo}" class="card-img-top propertyImg" alt="Property house" />
           <div class="card-body">
           <div><p class="card-text">${type}</p>  <p class="card-text">${status}</p></div>
@@ -131,9 +141,7 @@ function appendToCard(photo, price, status, address, baths, beds, type) {
              <p class="card-text" style="margin-right: 15px;"><strong>${baths}</strong> bath(s)</p>
              <p class="card-text"><strong>${beds}</strong> bed(s)</p>
             </div>
-             <p class="card-text" style="white-space: pre-wrap;">${address}</p>
-            
-             
+             <p class="card-text" style="white-space: pre-wrap;">${address}</p> 
           </div>
       </div>
   
