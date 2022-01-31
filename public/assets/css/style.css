@@ -216,14 +216,12 @@ footer {
   font-family: "Times New Roman", serif;
 }
 .question {
-  font-size: 35px;
+  font-size: 28px;
   text-align: center;
   width: 100%;
   font-family: serif;
-  padding: 20px;
+  padding: 20px 0px;
   margin-top: 10px;
-  /* position: relative;
-  top: 63px; */
   background-color: rgb(128, 128, 128, 0.4);
   color: white;
   text-shadow: 1px 1px black;
@@ -231,7 +229,7 @@ footer {
 
 .kwImg {
   position: relative;
-    bottom: 87px;
+    bottom: 81px;
     z-index: -1;
 }
 
