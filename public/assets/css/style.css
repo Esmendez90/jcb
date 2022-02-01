@@ -186,14 +186,18 @@ footer {
   height: 400px;
 }
 
-.aboutMe-btn-container {
+/* .aboutMe-btn-container {
   height: 235px;
-}
+} */
+
+/* .learMore-btn-container {
+  height: auto !important;
+} */
 
 .aboutMe-btn-container button {
   position: relative;
   left: -97px;
-  top: 90px;
+  top: 70px;
 }
 
 .aboutMe-btn {
@@ -230,21 +234,24 @@ footer {
   font-family: "Times New Roman", serif;
 }
 .question {
-  font-size: 28px;
-  text-align: center;
-  width: 100%;
-  font-family: serif;
-  padding: 20px 0px;
-  margin-top: 10px;
-  background-color: rgb(128, 128, 128, 0.4);
-  color: white;
-  text-shadow: 1px 1px black;
+  font-size: 28px !important;
+  text-align: center !important;
+  width: 100% !important;
+  font-family: serif !important;
+  padding: 20px 0px !important;
+  margin: 10px auto 0 !important;
+  color: white !important;
+  text-shadow: 1px 1px black !important;
+  background-image: linear-gradient(
+    45deg
+    , black, grey, grey, grey, transparent);
 }
 
 .kwImg {
   position: relative;
-  bottom: 81px;
+  bottom: 60px;
   z-index: -1;
+  width: inherit;
 }
 
 .aboutMe-text span {
