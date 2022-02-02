@@ -92,7 +92,7 @@ header {
 .knowYourRealtor {
   color: rgb(195, 9, 90) !important;
   font-weight: normal !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
 }
 
 /* .knowYourRealtor {
@@ -170,35 +170,39 @@ footer {
 
 .aboutMe-col {
   text-align: center;
-  padding: 15px 0;
+  padding: 15px 0 0;
 }
 
-.imgContainer {
+h3 {
+  font-size: 20px;
+}
+
+/* .imgContainer {
   padding: 0;
   background-image: url(/assets/images/jcblogo.png);
   background-size: cover;
   position: relative;
-}
+} */
 
-.img-containerWithin {
+/* .img-containerWithin {
   background-color: #ffffff;
   opacity: 0.6;
   height: 400px;
-}
-
-/* .aboutMe-btn-container {
-  height: 235px;
 } */
+
+.aboutMe-btn-container {
+  margin-bottom: 15px;
+}
 
 /* .learMore-btn-container {
   height: auto !important;
 } */
 
-.aboutMe-btn-container button {
+/* .aboutMe-btn-container button {
   position: relative;
   left: -97px;
   top: 70px;
-}
+} */
 
 .aboutMe-btn {
   width: 150px;
@@ -206,7 +210,8 @@ footer {
   border-radius: 20px;
   color: white;
   font-weight: bolder;
-  background-image: linear-gradient(to right,
+  background-image: linear-gradient(
+    to right,
     black,
     black,
     rgb(87, 86, 86),
@@ -217,11 +222,11 @@ footer {
 .jennifer-photo {
   width: 50%;
   height: auto;
-  border-radius: 110px;
+  border-radius: 100px;
   margin: 25px auto;
-  position: absolute;
+  /* position: absolute;
   top: 85px;
-  right: 3%;
+  right: 3%; */
 }
 
 .aboutMe-col p,
@@ -243,15 +248,27 @@ footer {
   color: white !important;
   text-shadow: 1px 1px black !important;
   background-image: linear-gradient(
-    45deg
-    , black, grey, grey, grey, transparent);
+    45deg,
+    black,
+    grey,
+    grey,
+    grey,
+    transparent
+  );
+}
+
+.kwBanner-container {
+  height: 240px;
 }
 
 .kwImg {
+  width: 100%;
+}
+
+.learnMore-btn-container {
   position: relative;
-  bottom: 60px;
-  z-index: -1;
-  width: inherit;
+  top: -70px;
+  left: -45px;
 }
 
 .aboutMe-text span {
@@ -275,7 +292,7 @@ footer {
   text-align: center;
   border-top: solid;
   border-color: #febd69;
-  border-width: 10px;
+  border-width: 1px;
 }
 
 .stickyRow {
