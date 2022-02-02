@@ -234,7 +234,7 @@ h3 {
   margin: 0px auto 15px;
   padding: 2px;
   width: 85%;
-  text-align: justify;
+  text-align: left;
   font-size: 20px;
   font-family: "Times New Roman", serif;
 }
@@ -285,7 +285,6 @@ h3 {
 }
 
 .contact-col {
-  height: 310px;
   padding: 15px 30px 30px;
   margin-top: 10px;
   color: white;
@@ -336,9 +335,7 @@ h3 {
 
 .contact-col li {
   display: inline-flex;
-  background-color: rgba(192, 192, 192, 0.9);
-  border-radius: 0.25rem;
-  padding: 8px;
+  padding: 5px;
 }
 
 .list-inline-item:not(:last-child) {
