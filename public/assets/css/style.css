@@ -128,22 +128,14 @@ input[type="radio"]:checked {
 
 .cardColumn,
 footer {
-  background-image: linear-gradient(
-    rgba(0, 0, 0),
-    rgb(87, 86, 86)
-  );
+  background-image: linear-gradient(black, black, rgb(87, 86, 86));
   padding: 20px 0px;
 }
 
 .carousel {
   margin-top: -12px;
   padding: 20px 0;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.7),
-    rgb(87, 86, 86),
-    rgb(87, 86, 86),
-    white
-  );
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(87, 86, 86), white);
 }
 
 .latestListingsContainer {
@@ -156,7 +148,7 @@ footer {
 }
 
 #resultsId {
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 0px;
   text-align: left !important;
   font-size: 16px !important;
@@ -166,7 +158,7 @@ footer {
 
 .aboutMe-col {
   text-align: center;
-  padding: 15px 0 0;
+  background-image: linear-gradient(white, white, white, grey, white);
 }
 
 h3 {
@@ -200,7 +192,8 @@ h3 {
   top: 70px;
 } */
 
-.learnMore-btn, .aboutMe-btn {
+.learnMore-btn,
+.aboutMe-btn {
   width: 150px;
   height: 44px;
   border-radius: 20px;
@@ -217,7 +210,7 @@ h3 {
 .aboutMe-btn {
   background-image: none;
   background-color: white;
-  color:black;
+  color: black;
 }
 
 .jennifer-photo {
@@ -286,8 +279,7 @@ h3 {
 }
 
 .contact-col {
-  padding: 10px;
-  margin-top: 10px;
+  padding: 5px;
   color: white;
   text-align: center;
   border-top: solid;
@@ -340,7 +332,7 @@ h3 {
 }
 
 .list-inline-item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .contact-icons {
@@ -351,6 +343,10 @@ h3 {
 .contact-icons-ul {
   padding-left: 0;
   margin-bottom: 2px;
+}
+
+.fa-phone {
+  font-size: 26px;
 }
 
 /* .phoneText {
@@ -487,6 +483,7 @@ h3 {
   margin: 0 12px;
   background-color: white;
   color: black;
+  border: 1px solid rgb(189, 189, 189);
   border-radius: 10px;
 }
 
