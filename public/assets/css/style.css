@@ -75,16 +75,24 @@ header {
   margin: 0 auto;
 }
 
-.latest-listForm {
+.latest-listForm, .prop-form {
   background-color: white;
   padding: 30px;
 }
 
-.latest-listForm p {
+.latest-listForm p, .prop-form p {
   text-align: center;
   color: black;
   font-size: 20;
   font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.btn-container {
+  text-align: center;
 }
 
 .text,
@@ -95,13 +103,9 @@ header {
   font-size: 16px !important;
 }
 
-/* .knowYourRealtor {
-  width: 100%;
-} */
-
 .radioBtns-container {
   color: black !important;
-  padding: 15px 15px 0px;
+  padding: 10px 15px 15px;
 }
 
 .radioBtns-container div {
@@ -120,10 +124,6 @@ input[type="radio" i] {
 
 input[type="radio"]:checked {
   background: radial-gradient(rgb(195, 9, 90), transparent);
-}
-
-.latest-listForm i {
-  display: none;
 }
 
 .cardColumn,
@@ -176,32 +176,9 @@ h3 {
   font-size: 20px;
 }
 
-/* .imgContainer {
-  padding: 0;
-  background-image: url(/assets/images/jcblogo.png);
-  background-size: cover;
-  position: relative;
-} */
-
-/* .img-containerWithin {
-  background-color: #ffffff;
-  opacity: 0.6;
-  height: 400px;
-} */
-
 .aboutMe-btn-container {
   margin-bottom: 15px;
 }
-
-/* .learMore-btn-container {
-  height: auto !important;
-} */
-
-/* .aboutMe-btn-container button {
-  position: relative;
-  left: -97px;
-  top: 70px;
-} */
 
 .learnMore-btn,
 .aboutMe-btn {
@@ -229,9 +206,6 @@ h3 {
   height: auto;
   border-radius: 100px;
   margin: 25px auto;
-  /* position: absolute;
-  top: 85px;
-  right: 3%; */
 }
 
 .aboutMe-col p,
@@ -361,94 +335,18 @@ h3 {
   font-size: 26px;
 }
 
-/* .phoneText {
-  font-size: 18px;
-} */
-
-/* .phoneText a {
-  color: white;
-} */
-
-/* .phoneText a:hover {
-  text-decoration: underline;
-} */
-
 #resultsHTML {
   color: white;
   margin: auto;
   padding: 10px;
 }
 
-.card {
-  color: black;
-  background-color: #febd69;
-  width: 70%;
-  border: 1px solid rgb(87, 86, 86);
-  text-align: center;
-}
-
-.card i {
-  font-size: 40px;
-  padding: 5px;
-  border: solid black;
-  border-radius: 10px;
-}
-
-.card h4 {
-  margin-top: 0.5rem;
-}
-
-.btn-secondary {
-  width: 60%;
-  background-color: rgb(87, 86, 86);
-  box-shadow: 1px 1px rgb(87, 86, 86);
-  border-color: rgb(87, 86, 86);
-  border-width: thick;
-  text-shadow: 1px 0.5px black;
-}
-
-.btn:hover {
-  box-shadow: none;
-}
-
-.btn-secondary:hover {
-  border-color: rgb(133, 132, 132);
-}
-
 .singIn-row {
   justify-content: center;
 }
 
-/* Form styling */
-.prop-form,
-.prop-form-main {
-  display: none;
-  width: 90%;
-  margin: 0px auto;
-  padding: 10px;
-  color: white;
-  background-color: rgb(235 229 229 / 14%);
-  border-radius: 5px;
-}
-
-.prop-form p,
-.prop-form p,
-.btn-container {
-  text-align: center;
-}
-
-.form-range {
-  padding-top: 15px;
-  margin: 10px 15px;
-  width: 50%;
-}
-
-.form-select {
-  width: fit-content;
-  margin: 10px 0 20px;
-}
 .btn-outline-secondary {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   background-color: #febd69;
   color: white;
   text-shadow: 1px 1px rgb(87 86 86);
@@ -469,13 +367,6 @@ h3 {
   border: none !important;
 }
 
-.span_search_lense:active {
-  border-style: solid;
-  border-width: 3px;
-  border-color: rgb(34, 111, 146);
-  opacity: 0.7;
-}
-
 .contact_media {
   text-align: center;
   margin: 20px;
@@ -483,15 +374,24 @@ h3 {
 
 /* Rentals Styling */
 .listingContainer {
-  margin: 20px auto;
+  margin: -40px auto 20px;
 }
 
 #propListing {
   display: inline-flex;
 }
 
+.listingContainer div div {
+  width: 90%;
+  margin: 5px auto;
+}
+
+.jen-realtor-btns-container{
+  display:inline-flex;
+}
+
 .cardListing {
-  width: 300px;
+  width: 310px;
   margin: 0 12px;
   background-color: white;
   color: black;
@@ -513,6 +413,7 @@ h3 {
   background-color: white;
   color: black;
   margin: 2px auto;
+  padding: 1px;
 }
 
 .contactJen-btn, .seeOnRealtor-btn {
