@@ -115,6 +115,9 @@ function showLatestListings(listings) {
     let beds = listings[i].beds;
     let type = listings[i].prop_type;
 
+    type = type.split("_").join(" ").toUpperCase();
+    status = status.split("_").join(" ").toUpperCase();
+
     if (photo) {
       photo = photo;
     } else if ((photo = "undefined")) {
@@ -133,7 +136,7 @@ function appendToCard(photo, price, status, address, baths, beds, type) {
         <img src="${photo}" class="card-img-top propertyImg" alt="Property house" />
           <div class="card-body">
           <div>
-            <div style="float:left; margin-right:25px;">
+            <div style="float:left; margin:8px 5% 0px 0px;">
               <p class="card-text">${type} </p>  
               <p class="card-text">${status} </p>
             </div>
