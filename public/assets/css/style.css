@@ -135,7 +135,7 @@ footer {
 .carousel {
   margin-top: -12px;
   padding: 20px 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(87, 86, 86), white);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgb(87, 86, 86), white, white);
 }
 
 .latestListingsContainer {
@@ -158,7 +158,7 @@ footer {
 
 .aboutMe-col {
   text-align: center;
-  background-image: linear-gradient(white, white, white, grey, white);
+  background-image: linear-gradient(white, white, white, rgb(185, 184, 184),white);
 }
 
 h3 {
