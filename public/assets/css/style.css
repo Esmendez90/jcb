@@ -257,6 +257,7 @@ h3 {
 
 .kwImg {
   width: 100%;
+  height: 187px;
 }
 
 .learnMore-btn-container {
@@ -490,6 +491,7 @@ h3 {
 .propertyImg {
   width: 100%;
   height: 200px;
+  border-radius: 10px;
 }
 
 @media only screen and (min-width: 768px) {
