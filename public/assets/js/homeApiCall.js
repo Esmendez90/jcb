@@ -132,7 +132,16 @@ function appendToCard(photo, price, status, address, baths, beds, type) {
       <div class="cardListing">
         <img src="${photo}" class="card-img-top propertyImg" alt="Property house" />
           <div class="card-body">
-          <div><p class="card-text">${type}</p>  <p class="card-text">${status}</p></div>
+          <div>
+            <div style="float:left; margin-right:25px;">
+              <p class="card-text">${type} </p>  
+              <p class="card-text">${status} </p>
+            </div>
+            <div style="display: inline-grid;">
+              <button type="button" class="card-btns"><a href="https://www.realtor.com/" target="_blank" class="seeOnRealtor-btn">View on realtor.com</a></button>
+              <button type="button" class="card-btns"><a href="tel:201-732-6844" class="contactJen-btn">Contact Jennifer</a></button>
+            </div>
+          </div>
             
               <p class="card-text" style="font-weight: bold;
                  font-size: 20px;">${price}</p>
