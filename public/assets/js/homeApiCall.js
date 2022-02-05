@@ -12,10 +12,17 @@ if (location.pathname === "/rentals") {
   selectProp = "rent";
   $(".radioBtns-container").css("display", "none");
   $(".listingContainer").css("display", "none");
+  $("footer").css({ position: "fixed", bottom: "0" });
+  $(".header-row").css({ position: "fixed", top: "0", "z-index": "1","width":"-webkit-fill-available"});
+  $(".latest-listForm").css({ position: "relative", top: "130px" });
+  $(".listingContainer").css({ position: "relative", top: "125px" });
 } else if (location.pathname === "/forsale") {
   selectProp = "sale";
   $(".radioBtns-container").css("display", "none");
   $(".listingContainer").css("display", "none");
+  $("footer").css({ position: "fixed", bottom: "0" });
+  $(".latest-listForm").css({ position: "relative", top: "130px" });
+  $(".listingContainer").css({ position: "relative", top: "125px" });
 }
 
 function getTodayDate() {
@@ -77,8 +84,7 @@ $(".latest-listForm").on("submit", function (event) {
     getTodayDate();
   }
 
-  
- listings = [];
+  listings = [];
   x;
   newArr = [];
   res = [];
@@ -104,7 +110,7 @@ function apiCall(cityName, zipCode, propType) {
 
   $.ajax(settings).done(function (response) {
     listings = response.listings;
-   // console.log(listings);
+    // console.log(listings);
 
     if (location.pathname === "/") {
       // Formatting date of last_update
@@ -125,9 +131,7 @@ function apiCall(cityName, zipCode, propType) {
 }
 
 function showLatestListings(listings) {
-  
   replaceHTML();
-  
 
   for (let i = 0; i < listings.length; i++) {
     let photo = listings[i].photo;
@@ -153,7 +157,6 @@ function showLatestListings(listings) {
 }
 
 function appendToCard(photo, price, status, address, baths, beds, type) {
- 
   $("#propListing").append(
     `
       <div class="cardListing">
