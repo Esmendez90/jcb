@@ -196,9 +196,23 @@ h3 {
   );
 }
 
+/* .aboutMe-btn, .learnMore-btn a {
+  color: black;
+  text-decoration: none;
+} */
+
 .aboutMe-btn {
   background-image: none;
   background-color: white;
+  color: black;
+}
+
+.aboutMe-btn a, .learnMore-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.aboutMe-btn a {
   color: black;
 }
 

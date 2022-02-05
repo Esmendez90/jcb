@@ -94,7 +94,6 @@ $(".latest-listForm").on("submit", function (event) {
   newArr = [];
   res = [];
   latestListings = [];
-  // console.log(cityName, zipCode, selectProp);
   $("#propListing").empty();
 
   apiCall(cityName, zipCode, selectProp);
@@ -115,8 +114,6 @@ function apiCall(cityName, zipCode, propType) {
 
   $.ajax(settings).done(function (response) {
     listings = response.listings;
-    // console.log(listings);
-
     if (location.pathname === "/") {
       // Formatting date of last_update
       x = listings.map((obj) => {

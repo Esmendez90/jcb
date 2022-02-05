@@ -15,4 +15,12 @@ router.get("/rentals", function (req, res) {
   res.render("rentals");
 });
 
+router.get("/jennifer", function (req, res) {
+  res.render("jennifer");
+});
+
+router.get("/kellerwilliams", function (req, res) {
+  res.render("kw");
+});
+
 module.exports = router;
