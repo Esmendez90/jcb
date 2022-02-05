@@ -10,18 +10,22 @@ let latestListings = [];
 
 if (location.pathname === "/rentals") {
   selectProp = "rent";
-  $(".radioBtns-container").css("display", "none");
-  $(".listingContainer").css("display", "none");
-  $("footer").css({ position: "fixed", bottom: "0" });
-  $(".header-row").css({ position: "fixed", top: "0", "z-index": "1","width":"-webkit-fill-available"});
-  $(".latest-listForm").css({ position: "relative", top: "130px" });
-  $(".listingContainer").css({ position: "relative", top: "125px" });
+  editStyle();
 } else if (location.pathname === "/forsale") {
   selectProp = "sale";
+  editStyle();
+}
+
+function editStyle() {
   $(".radioBtns-container").css("display", "none");
   $(".listingContainer").css("display", "none");
   $("footer").css({ position: "fixed", bottom: "0" });
-  $(".header-row").css({ position: "fixed", top: "0", "z-index": "1","width":"-webkit-fill-available"});
+  $(".header-row").css({
+    position: "fixed",
+    top: "0",
+    "z-index": "1",
+    width: "-webkit-fill-available",
+  });
   $(".latest-listForm").css({ position: "relative", top: "130px" });
   $(".listingContainer").css({ position: "relative", top: "125px" });
 }
