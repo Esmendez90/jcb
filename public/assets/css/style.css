@@ -21,42 +21,43 @@ header {
   border-width: 2px;
   background-image: linear-gradient(black, black, black, rgb(87, 86, 86));
 }
-
+/* 
 .jcbLogo {
   display: flex;
-}
+} */
 
 .columnJCB {
   width: 100%;
+  display: contents;
 }
 
 .columnJCB a {
   text-decoration: none;
+  width: 100%;
 }
 
 .jcbLogo img {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
 }
 
 .columnJCB p {
-  font-size: 22px;
+  font-size: 20px;
   font-family: "Times New Roman", serif;
-  margin: 10px 0px 10px 15px;
+  margin: 10px;
   color: #febd69;
   text-shadow: 1px 1px rgb(87 86 86);
 }
 
 .logos-container {
-  width: 100%;
+  margin: 15px 15px 10px 25px;
   display: inline-flex;
-  padding-right: 15px;
-  justify-content: right;
+  
 }
 
 .fa-bars,
 .fa-user-circle {
-  font-size: 22px;
+  font-size: 20px;
   color: #febd69;
   margin-right: 15px;
 }
