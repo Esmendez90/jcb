@@ -161,13 +161,7 @@ footer {
 
 .aboutMe-col {
   text-align: center;
-  background-image: linear-gradient(
-    white,
-    white,
-    white,
-    rgb(185, 184, 184),
-    white
-  );
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -217,7 +211,7 @@ h3 {
 .jennifer-photo {
   width: 50%;
   height: auto;
-  border-radius: 100px;
+  border-radius: 50%;
   margin: 25px auto;
 }
 
@@ -438,18 +432,48 @@ h3 {
 }
 
 @media only screen and (min-width: 768px) {
-  .listingContainer {
-    margin: 20px;
-    margin-right: -5px;
+  .stickyRow {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 40%;
+    margin: 11px;
+    background-color: none;
   }
 
-  #propListing {
-    display: contents;
+  .stickyBtn-container {
+    border:none;
   }
-  /* .cardListing {
-    width: 30% ;
-    margin: 5px;
+
+  .stickyBtn-container div {
+    width: auto;
+}
+
+  .form-container {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .jennifer-photo {
+    width: 35%;
+  }
+
+  .aboutMe-col p {
+    text-align: center;
+  }
+  .img-containerWithin h1 {
+    margin-left: 20%;
+  }
+  
+  /*listingContainer {
+    margin: 20px;
+    margin-right: -5px;
   } */
+
+  /* #propListing {
+    display: contents;
+  } */
+  
 }
 
 /* Style background-image for screens greater than 1201 px.
