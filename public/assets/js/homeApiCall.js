@@ -8,7 +8,9 @@ let newArr = [];
 let res = [];
 let latestListings = [];
 
-if (location.pathname === "/rentals") {
+if (location.pathname === "/") {
+  $("#propListing").css({ display: "inline-flex", "align-items": "normal" });
+} else if (location.pathname === "/rentals") {
   selectProp = "rent";
   editStyle();
 } else if (location.pathname === "/forsale") {

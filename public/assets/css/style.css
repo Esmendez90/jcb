@@ -411,7 +411,7 @@ h3 {
 }
 
 .card-btns {
-  width: 160px;
+  width: 149px;
   height: 36px;
   border-radius: 10px;
   background-image: none;
@@ -493,12 +493,25 @@ h3 {
 
 /* Style background-image for screens greater than 1201 px.
 1201px and more — Extra large screens, TV. */
-@media only screen and (min-width: 1024px) {
-  .cardListing {
-    width: 20%;
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: rgba(87,86,86,0.1);
+  }
+  .videoRow,
+  .carousel {
+    width: 65%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px grey;
+  }
+
+  .carousel {
+    margin-top: 0;
+    padding: 0;
+    background-image: none;
   }
 
   .form-container {
-    width: 35%;
+    width: 60%;
   }
+  
 }
