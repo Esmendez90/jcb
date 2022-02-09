@@ -126,7 +126,7 @@ input[type="radio"]:checked {
 }
 
 footer {
-  background-image: linear-gradient(black, black, rgb(87, 86, 86));
+  background-image: linear-gradient(black, black, black, rgb(87, 86, 86));
   padding: 20px 0px;
 }
 
@@ -495,10 +495,10 @@ h3 {
 1201px and more — Extra large screens, TV. */
 @media only screen and (min-width: 1200px) {
   body {
-    background-color: rgba(87,86,86,0.1);
+    background-color: rgba(87, 86, 86, 0.1);
   }
   .videoRow,
-  .carousel {
+  main {
     width: 65%;
     margin: 0 auto;
     box-shadow: 0px 0px 20px grey;
@@ -507,11 +507,17 @@ h3 {
   .carousel {
     margin-top: 0;
     padding: 0;
-    background-image: none;
   }
 
   .form-container {
-    width: 60%;
+    width: 50%;
   }
-  
+
+  .jenniferRow {
+    background-color: white;
+  }
+
+  .aboutMe-col {
+    margin: 30px 0;
+  }
 }
