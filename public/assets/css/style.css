@@ -19,12 +19,8 @@ header {
   border-top-style: solid;
   border-color: #febd69;
   border-width: 2px;
-  background-image: linear-gradient(black, black, black, rgb(87, 86, 86));
+  background-color: black;
 }
-/* 
-.jcbLogo {
-  display: flex;
-} */
 
 .columnJCB {
   width: 100%;
@@ -52,7 +48,6 @@ header {
 .logos-container {
   margin: 15px 10px 10px;
   display: inline-flex;
-  
 }
 
 .fa-bars,
@@ -208,7 +203,8 @@ h3 {
   color: black;
 }
 
-.aboutMe-btn a, .learnMore-btn a {
+.aboutMe-btn a,
+.learnMore-btn a {
   text-decoration: none;
   color: white;
 }
@@ -290,17 +286,18 @@ h3 {
 }
 
 .stickyRow {
+  background-color: black;
   width: 100%;
   height: 40px;
   padding: 0;
   margin-top: -1px;
   z-index: 1;
-  background-image: linear-gradient(rgb(87, 86, 86), black, black);
 }
 
 .stickyBtn-container {
   display: flex;
   height: inherit;
+  border-top: 1px solid rgb(87,86,86);
 }
 
 .stickyBtn-container div {
