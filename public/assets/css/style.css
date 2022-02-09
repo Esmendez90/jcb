@@ -75,7 +75,7 @@ header {
 .latest-listForm,
 .prop-form {
   background-color: white;
-  padding: 30px;
+  padding: 30px 30px 15px;
 }
 
 .latest-listForm p,
@@ -292,7 +292,7 @@ h3 {
 .stickyBtn-container {
   display: flex;
   height: inherit;
-  border-top: 1px solid rgb(87,86,86);
+  border-top: 1px solid rgb(87, 86, 86);
 }
 
 .stickyBtn-container div {
@@ -383,16 +383,12 @@ h3 {
 
 /* Rentals Styling */
 .listingContainer {
-  margin: -40px auto 20px;
+  margin: -50px auto 20px;
 }
 
 #propListing {
   display: inline-flex;
-}
-
-.listingContainer div div {
-  width: 90%;
-  margin: 5px auto;
+  align-items: center;
 }
 
 .jen-realtor-btns-container {
@@ -400,8 +396,8 @@ h3 {
 }
 
 .cardListing {
-  width: 310px;
-  margin: 0 12px;
+  width: 90%;
+  margin: 10px;
   background-color: white;
   color: black;
   border: 1px solid rgb(189, 189, 189);
@@ -430,7 +426,7 @@ h3 {
   text-decoration: none;
   color: black;
 }
-
+/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .stickyRow {
     position: absolute;
@@ -442,12 +438,12 @@ h3 {
   }
 
   .stickyBtn-container {
-    border:none;
+    border: none;
   }
 
   .stickyBtn-container div {
     width: auto;
-}
+  }
 
   .form-container {
     width: 65%;
@@ -464,30 +460,45 @@ h3 {
   .img-containerWithin h1 {
     margin-left: 20%;
   }
-  
-  /*listingContainer {
-    margin: 20px;
-    margin-right: -5px;
-  } */
 
-  /* #propListing {
+  .listingContainer {
+    justify-content: center;
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+
+  #propListing {
     display: contents;
-  } */
-  
+  }
+
+  .cardListing {
+    width: 47%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .form-container {
+    width: 45%;
+  }
+
+  #resultsId {
+    margin-left: 6%;
+  }
+
+  .cardListing {
+    width: 30%;
+  }
 }
 
 /* Style background-image for screens greater than 1201 px.
 1201px and more — Extra large screens, TV. */
 @media only screen and (min-width: 1024px) {
-  .rowCards {
-    justify-content: center !important;
+  .cardListing {
+    width: 20%;
   }
 
-  .cardColumn {
-    display: contents;
-  }
-
-  .card {
-    width: 32% !important;
+  .form-container {
+    width: 35%;
   }
 }

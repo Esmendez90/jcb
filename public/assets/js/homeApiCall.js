@@ -26,7 +26,7 @@ function editStyle() {
     "z-index": "1",
     width: "-webkit-fill-available",
   });
-  $(".latest-listForm").css({ position: "relative", top: "130px" });
+  $(".latest-listForm").css({ position: "relative", top: "80px" });
   $(".listingContainer").css({ position: "relative", top: "125px" });
 }
 
