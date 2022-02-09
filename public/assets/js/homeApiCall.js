@@ -167,7 +167,7 @@ function appendToCard(photo, price, status, address, baths, beds, type) {
         <img src="${photo}" class="card-img-top propertyImg" alt="Property house" />
           <div class="card-body">
           <div class="jen-realtor-btns-container">
-            <div style="margin:8px 5% 0px 0px;">
+            <div style="margin:8px 5% 0px 0px; width:100px ">
               <p class="card-text">${type} </p>  
               <p class="card-text">${status} </p>
             </div>
