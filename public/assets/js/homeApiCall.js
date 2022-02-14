@@ -8,6 +8,17 @@ let newArr = [];
 let res = [];
 let latestListings = [];
 
+if (localStorage.getItem("latest-listings") === null) {
+  localStorage.setItem("latest-listings", JSON.stringify([]));
+}
+
+function listingsStorage(){
+  console.log("hey");
+  localStorage.setItem("lastest-listings", JSON.stringify(JSON.parse(latestListings)) )
+}
+
+
+
 if (location.pathname === "/") {
   $("#propListing").css({ display: "inline-flex", "align-items": "normal" });
 } else if (location.pathname === "/rentals") {
@@ -78,27 +89,29 @@ function filterLatestListings(newArr) {
 $(".latest-listForm").on("submit", function (event) {
   event.preventDefault();
 
-  cityName = $("#cityName").val().trim();
-  zipCode = $("#zipCode").val().trim();
+  listingsStorage();
 
-  if (location.pathname === "/") {
-    // console.log(location.pathname);
-    let ele = document.getElementsByName("select-prop-type");
-    for (i = 0; i < ele.length; i++) {
-      if (ele[i].checked) selectProp = ele[i].value.toLowerCase();
-    }
-    // console.log(selectProp);
-    getTodayDate();
-  }
+  // cityName = $("#cityName").val().trim();
+  // zipCode = $("#zipCode").val().trim();
 
-  listings = [];
-  x;
-  newArr = [];
-  res = [];
-  latestListings = [];
-  $("#propListing").empty();
+  // if (location.pathname === "/") {
+  //   // console.log(location.pathname);
+  //   let ele = document.getElementsByName("select-prop-type");
+  //   for (i = 0; i < ele.length; i++) {
+  //     if (ele[i].checked) selectProp = ele[i].value.toLowerCase();
+  //   }
+  //   // console.log(selectProp);
+  //   getTodayDate();
+  // }
 
-  apiCall(cityName, zipCode, selectProp);
+  // listings = [];
+  // x;
+  // newArr = [];
+  // res = [];
+  // latestListings = [];
+  // $("#propListing").empty();
+
+  // apiCall(cityName, zipCode, selectProp);
 });
 
 function apiCall(cityName, zipCode, propType) {
