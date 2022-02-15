@@ -1,6 +1,6 @@
 let cityName;
 let zipCode;
-let selectProp = "sale";
+let selectProp;
 let today;
 let listings;
 let x;
@@ -23,11 +23,18 @@ function listingsStorage() {
 
 if (location.pathname === "/") {
   $("#propListing").css({ display: "inline-flex", "align-items": "normal" });
+  selectProp = "sale";
+  getTodayDate();
+apiCall("west new york", "07093", "sale");
 } else if (location.pathname === "/rentals") {
   selectProp = "rent";
+  getTodayDate();
+apiCall("west new york", "07093", "rent");
   editStyle();
 } else if (location.pathname === "/forsale") {
   selectProp = "sale";
+  getTodayDate();
+apiCall("west new york", "07093", "sale");
   editStyle();
 }
 
@@ -237,5 +244,4 @@ function replaceHTML(c) {
   }
 }
 
-getTodayDate();
-apiCall("west new york", "07093", "sale");
+
