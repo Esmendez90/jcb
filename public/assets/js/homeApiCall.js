@@ -1,23 +1,25 @@
 let cityName;
 let zipCode;
-let selectProp;
+let selectProp = "sale";
 let today;
 let listings;
 let x;
 let newArr = [];
 let res = [];
 let latestListings = [];
+let c;
 
 if (localStorage.getItem("latest-listings") === null) {
   localStorage.setItem("latest-listings", JSON.stringify([]));
 }
 
-function listingsStorage(){
+function listingsStorage() {
   console.log("hey");
-  localStorage.setItem("lastest-listings", JSON.stringify(JSON.parse(latestListings)) )
+  localStorage.setItem(
+    "lastest-listings",
+    JSON.stringify(JSON.parse(latestListings))
+  );
 }
-
-
 
 if (location.pathname === "/") {
   $("#propListing").css({ display: "inline-flex", "align-items": "normal" });
@@ -83,39 +85,41 @@ function filterLatestListings(newArr) {
   });
 
   // console.log(latestListings);
-  showLatestListings(latestListings);
+  showLatestListings(latestListings, c);
 }
 
 $(".latest-listForm").on("submit", function (event) {
   event.preventDefault();
 
-  listingsStorage();
+  //listingsStorage();
 
-  // cityName = $("#cityName").val().trim();
-  // zipCode = $("#zipCode").val().trim();
+  cityName = $("#cityName").val().trim();
+  zipCode = $("#zipCode").val().trim();
 
-  // if (location.pathname === "/") {
-  //   // console.log(location.pathname);
-  //   let ele = document.getElementsByName("select-prop-type");
-  //   for (i = 0; i < ele.length; i++) {
-  //     if (ele[i].checked) selectProp = ele[i].value.toLowerCase();
-  //   }
-  //   // console.log(selectProp);
-  //   getTodayDate();
-  // }
+  if (location.pathname === "/") {
+    // console.log(location.pathname);
+    let ele = document.getElementsByName("select-prop-type");
+    for (i = 0; i < ele.length; i++) {
+      if (ele[i].checked) selectProp = ele[i].value.toLowerCase();
+    }
+    // console.log(selectProp);
+    getTodayDate();
+  }
 
-  // listings = [];
-  // x;
-  // newArr = [];
-  // res = [];
-  // latestListings = [];
-  // $("#propListing").empty();
+  listings = [];
+  x;
+  newArr = [];
+  res = [];
+  latestListings = [];
+  $("#propListing").empty();
 
-  // apiCall(cityName, zipCode, selectProp);
+  apiCall(cityName, zipCode, selectProp);
 });
 
 function apiCall(cityName, zipCode, propType) {
+  
   cityName = encodeURI(cityName);
+  //console.log(cityName, zipCode, propType);
   const settings = {
     async: true,
     crossDomain: true,
@@ -128,7 +132,11 @@ function apiCall(cityName, zipCode, propType) {
   };
 
   $.ajax(settings).done(function (response) {
+  // console.log(response);
+   c = response.listings[0].address_new.city;
+  // console.log(c);
     listings = response.listings;
+   
     if (location.pathname === "/") {
       // Formatting date of last_update
       x = listings.map((obj) => {
@@ -142,13 +150,14 @@ function apiCall(cityName, zipCode, propType) {
     ) {
       $(".listingContainer").css("display", "block");
 
-      showLatestListings(listings);
+     
+      showLatestListings(listings, c);
     }
   });
 }
 
-function showLatestListings(listings) {
-  replaceHTML();
+function showLatestListings(listings, c) {
+  replaceHTML(c);
 
   for (let i = 0; i < listings.length; i++) {
     let photo = listings[i].photo;
@@ -205,11 +214,15 @@ function appendToCard(photo, price, status, address, baths, beds, type) {
   );
 }
 
-function replaceHTML() {
+function replaceHTML(c) {
+  // cityName = decodeURI(cityName);
+  //  console.log(c);
+ 
+
   if (location.pathname === "/") {
     document.getElementById(
       "resultsId"
-    ).innerHTML = `<span style="color:rgb(195, 9, 90)">Showing results from last <strong>7</strong> days.</span> <br>Results for <strong>${selectProp}</strong> in <strong>${cityName.toUpperCase()}</strong>: ${
+    ).innerHTML = `<span style="color:rgb(195, 9, 90)">Showing results from last <strong>7</strong> days.</span> <br>Results for <strong>${selectProp}</strong> in <strong>${c.toUpperCase()}</strong>: ${
       latestListings.length
     } found. `;
   } else if (
@@ -218,8 +231,11 @@ function replaceHTML() {
   ) {
     document.getElementById(
       "resultsId"
-    ).innerHTML = `Results in <strong>${cityName.toUpperCase()}</strong>: ${
+    ).innerHTML = `Results in <strong>${c.toUpperCase()}</strong>: ${
       listings.length
     } found. `;
   }
 }
+
+getTodayDate();
+apiCall("west new york", "07093", "sale");
