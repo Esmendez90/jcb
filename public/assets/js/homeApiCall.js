@@ -41,7 +41,7 @@ apiCall("west new york", "07093", "sale");
 function editStyle() {
   $(".radioBtns-container").css("display", "none");
   $(".listingContainer").css("display", "none");
-  $("footer").css({ position: "fixed", bottom: "0" });
+  // $("footer").css({ position: "fixed", bottom: "0" });
   $(".header-row").css({
     position: "fixed",
     top: "0",
